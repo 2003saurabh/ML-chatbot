@@ -1,0 +1,10 @@
+streamlit
+boto3
+langchain
+langchain_community
+qdrant-client
+dotenv
+langchain_aws
+langchain_qdrant
+pypdf
+uuid

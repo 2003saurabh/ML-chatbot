@@ -1,0 +1,2297 @@
+[2025-04-26 13:49:35] INFO - services.llm_service - Bedrock LLM client initialized.
+[2025-04-26 13:49:37] INFO - services.vector_service - Vectorstore and embedding initialized.
+[2025-04-26 13:49:40] DEBUG - core.chatbot - final_input: first=RunnableLambda(lambda x: {'context': x.get('context', ''), 'question': x.get('question', ''), 'chat_history': x.get('chat_history', [])}) middle=[] last=ChatPromptTemplate(input_variables=['chat_history', 'context', 'question'], input_types={'chat_history': list[typing.Annotated[typing.Union[typing.Annotated[langchain_core.messages.ai.AIMessage, Tag(tag='ai')], typing.Annotated[langchain_core.messages.human.HumanMessage, Tag(tag='human')], typing.Annotated[langchain_core.messages.chat.ChatMessage, Tag(tag='chat')], typing.Annotated[langchain_core.messages.system.SystemMessage, Tag(tag='system')], typing.Annotated[langchain_core.messages.function.FunctionMessage, Tag(tag='function')], typing.Annotated[langchain_core.messages.tool.ToolMessage, Tag(tag='tool')], typing.Annotated[langchain_core.messages.ai.AIMessageChunk, Tag(tag='AIMessageChunk')], typing.Annotated[langchain_core.messages.human.HumanMessageChunk, Tag(tag='HumanMessageChunk')], typing.Annotated[langchain_core.messages.chat.ChatMessageChunk, Tag(tag='ChatMessageChunk')], typing.Annotated[langchain_core.messages.system.SystemMessageChunk, Tag(tag='SystemMessageChunk')], typing.Annotated[langchain_core.messages.function.FunctionMessageChunk, Tag(tag='FunctionMessageChunk')], typing.Annotated[langchain_core.messages.tool.ToolMessageChunk, Tag(tag='ToolMessageChunk')]], FieldInfo(annotation=NoneType, required=True, discriminator=Discriminator(discriminator=<function _get_type at 0x00000220A1981300>, custom_error_type=None, custom_error_message=None, custom_error_context=None))]]}, partial_variables={}, messages=[SystemMessagePromptTemplate(prompt=PromptTemplate(input_variables=[], input_types={}, partial_variables={}, template='\nYou are Llama 3, a helpful, concise, and knowledgeable AI assistant. \nYou answer questions strictly using only the information provided in <context>. \nYou do not use prior knowledge or make assumptions beyond the given context.\n\nInstructions:\n- If the answer is found in the context, answer concisely and accurately.\n- If the answer is not found in the context, reply exactly with:\n"I\'m sorry, I could not find enough information to answer that."\n- Do not mention your limitations or training data.\n- Do not repeat the context in your answer.\n- Stay strictly within the Machine Learning domain.\n'), additional_kwargs={}), MessagesPlaceholder(variable_name='chat_history'), HumanMessagePromptTemplate(prompt=PromptTemplate(input_variables=['context', 'question'], input_types={}, partial_variables={}, template='\n<context>\n{context}\n</context>\n\nQuestion:\n{question}\n'), additional_kwargs={})])
+[2025-04-26 13:49:40] INFO - services.llm_service - Bedrock LLM client initialized.
+[2025-04-26 13:49:40] INFO - services.memory_service - Memory initialized
+[2025-04-26 13:50:06] INFO - __main__ - User input: what is machine learning?
+[2025-04-26 13:50:06] DEBUG - error_handler - Calling function: get_chat_response
+[2025-04-26 13:50:06] INFO - core.chatbot - Processing question: what is machine learning?
+[2025-04-26 13:50:08] DEBUG - core.chatbot - Question: what is machine learning?
+[2025-04-26 13:50:08] DEBUG - core.chatbot - Number of docs retrieved: 7
+[2025-04-26 13:50:08] DEBUG - core.chatbot - Doc 1:
+
+---
+[2025-04-26 13:50:08] DEBUG - core.chatbot - Doc 2:
+
+---
+[2025-04-26 13:50:08] DEBUG - core.chatbot - Doc 5:
+
+---
+[2025-04-26 13:50:08] DEBUG - core.chatbot - Doc 6:
+PART I
+The Fundamentals of
+Machine Learning
+---
+[2025-04-26 13:50:08] DEBUG - core.chatbot - Doc 7:
+
+---
+[2025-04-26 13:50:08] INFO - core.chatbot - Short-term history: []
+[2025-04-26 13:50:08] INFO - core.chatbot - Final Prompt given to LLM:
+[2025-04-26 13:50:08] INFO - core.chatbot - SYSTEM: 
+You are Llama 3, a helpful, concise, and knowledgeable AI assistant. 
+You answer questions strictly using only the information provided in <context>. 
+You do not use prior knowledge or make assumptions beyond the given context.
+
+Instructions:
+- If the answer is found in the context, answer concisely and accurately.
+- If the answer is not found in the context, reply exactly with:
+"I'm sorry, I could not find enough information to answer that."
+- Do not mention your limitations or training data.
+- Do not repeat the context in your answer.
+- Stay strictly within the Machine Learning domain.
+
+[2025-04-26 13:50:09] INFO - core.chatbot - Short-term memory updated.
+[2025-04-26 13:50:09] INFO - core.chatbot - Response generated successfully
+[2025-04-27 22:23:10] INFO - services.llm_service - Bedrock LLM client initialized.
+[2025-04-27 22:23:12] INFO - services.vector_service - Vectorstore and embedding initialized.
+[2025-04-27 22:23:14] DEBUG - core.chatbot - final_input: first=RunnableLambda(lambda x: {'context': x.get('context', ''), 'question': x.get('question', ''), 'chat_history': x.get('chat_history', [])}) middle=[] last=ChatPromptTemplate(input_variables=['chat_history', 'context', 'question'], input_types={'chat_history': list[typing.Annotated[typing.Union[typing.Annotated[langchain_core.messages.ai.AIMessage, Tag(tag='ai')], typing.Annotated[langchain_core.messages.human.HumanMessage, Tag(tag='human')], typing.Annotated[langchain_core.messages.chat.ChatMessage, Tag(tag='chat')], typing.Annotated[langchain_core.messages.system.SystemMessage, Tag(tag='system')], typing.Annotated[langchain_core.messages.function.FunctionMessage, Tag(tag='function')], typing.Annotated[langchain_core.messages.tool.ToolMessage, Tag(tag='tool')], typing.Annotated[langchain_core.messages.ai.AIMessageChunk, Tag(tag='AIMessageChunk')], typing.Annotated[langchain_core.messages.human.HumanMessageChunk, Tag(tag='HumanMessageChunk')], typing.Annotated[langchain_core.messages.chat.ChatMessageChunk, Tag(tag='ChatMessageChunk')], typing.Annotated[langchain_core.messages.system.SystemMessageChunk, Tag(tag='SystemMessageChunk')], typing.Annotated[langchain_core.messages.function.FunctionMessageChunk, Tag(tag='FunctionMessageChunk')], typing.Annotated[langchain_core.messages.tool.ToolMessageChunk, Tag(tag='ToolMessageChunk')]], FieldInfo(annotation=NoneType, required=True, discriminator=Discriminator(discriminator=<function _get_type at 0x000002055EF61300>, custom_error_type=None, custom_error_message=None, custom_error_context=None))]]}, partial_variables={}, messages=[SystemMessagePromptTemplate(prompt=PromptTemplate(input_variables=[], input_types={}, partial_variables={}, template='\nYou are Llama 3, a helpful, concise, and knowledgeable AI assistant. \nYou answer questions strictly using only the information provided in <context>. \nYou do not use prior knowledge or make assumptions beyond the given context.\n\nInstructions:\n- If the answer is found in the context, answer concisely and accurately.\n- If the answer is not found in the context, reply exactly with:\n"I\'m sorry, I could not find enough information to answer that."\n- Do not mention your limitations or training data.\n- Do not repeat the context in your answer.\n- Stay strictly within the Machine Learning domain.\n'), additional_kwargs={}), MessagesPlaceholder(variable_name='chat_history'), HumanMessagePromptTemplate(prompt=PromptTemplate(input_variables=['context', 'question'], input_types={}, partial_variables={}, template='\n<context>\n{context}\n</context>\n\nQuestion:\n{question}\n'), additional_kwargs={})])
+[2025-04-27 22:23:14] INFO - services.llm_service - Bedrock LLM client initialized.
+[2025-04-27 22:23:14] INFO - services.memory_service - Memory initialized
+[2025-04-27 22:23:45] INFO - __main__ - User input: what is supervised machine learning algorithms
+[2025-04-27 22:23:45] DEBUG - error_handler - Calling function: get_chat_response
+[2025-04-27 22:23:45] INFO - core.chatbot - Processing question: what is supervised machine learning algorithms
+[2025-04-27 22:23:47] DEBUG - core.chatbot - Question: what is supervised machine learning algorithms
+[2025-04-27 22:23:47] DEBUG - core.chatbot - Number of docs retrieved: 7
+[2025-04-27 22:23:47] DEBUG - core.chatbot - Doc 1:
+
+---
+[2025-04-27 22:23:47] DEBUG - core.chatbot - Doc 2:
+2 Some neural network architectures can be unsupervised, such as autoencoders and restricted Boltzmann
+machines. They can also be semisupervised, such as in deep belief networks and unsupervised pretraining.
+Here are some of the most important supervised learning algorithms (covered in this
+book):
+• k-Nearest Neighbors
+• Linear Regression
+• Logistic Regression
+• Support Vector Machines (SVMs)
+• Decision Trees and Random Forests
+• Neural networks2
+Unsupervised learning
+In unsupervised learning , as you might guess, the training data is unlabeled
+(Figure 1-7). The system tries to learn without a teacher.
+Figure 1-7. An unlabeled training set for unsupervised learning
+Here are some of the most important unsupervised learning algorithms (most of
+these are covered in Chapter 8 and Chapter 9):
+• Clustering
+— K-Means
+— DBSCAN
+— Hierarchical Cluster Analysis (HCA)
+• Anomaly detection and novelty detection
+— One-class SVM
+— Isolation Forest
+10 | Chapter 1: The Machine Learning Landscape
+---
+[2025-04-27 22:23:47] DEBUG - core.chatbot - Doc 3:
+
+---
+[2025-04-27 22:23:47] DEBUG - core.chatbot - Doc 6:
+
+---
+[2025-04-27 22:23:47] DEBUG - core.chatbot - Doc 7:
+
+---
+[2025-04-27 22:23:47] INFO - core.chatbot - Short-term history: []
+[2025-04-27 22:23:47] INFO - core.chatbot - Final Prompt given to LLM:
+[2025-04-27 22:23:47] INFO - core.chatbot - SYSTEM: 
+You are Llama 3, a helpful, concise, and knowledgeable AI assistant. 
+You answer questions strictly using only the information provided in <context>. 
+You do not use prior knowledge or make assumptions beyond the given context.
+
+Instructions:
+- If the answer is found in the context, answer concisely and accurately.
+- If the answer is not found in the context, reply exactly with:
+"I'm sorry, I could not find enough information to answer that."
+- Do not mention your limitations or training data.
+- Do not repeat the context in your answer.
+- Stay strictly within the Machine Learning domain.
+
+[2025-04-27 22:23:48] INFO - core.chatbot - Short-term memory updated.
+[2025-04-27 22:23:48] INFO - core.chatbot - Response generated successfully
+[2025-04-27 22:24:27] INFO - __main__ - User input: do you have any knowledge regrading transformers?
+[2025-04-27 22:24:27] DEBUG - error_handler - Calling function: get_chat_response
+[2025-04-27 22:24:27] INFO - core.chatbot - Processing question: do you have any knowledge regrading transformers?
+[2025-04-27 22:24:28] DEBUG - core.chatbot - Question: do you have any knowledge regrading transformers?
+[2025-04-27 22:24:28] DEBUG - core.chatbot - Number of docs retrieved: 7
+[2025-04-27 22:24:28] DEBUG - core.chatbot - Doc 1:
+
+---
+[2025-04-27 22:24:28] DEBUG - core.chatbot - Doc 2:
+
+---
+[2025-04-27 22:24:28] DEBUG - core.chatbot - Doc 3:
+
+---
+[2025-04-27 22:24:28] DEBUG - core.chatbot - Doc 4:
+
+---
+[2025-04-27 22:24:28] DEBUG - core.chatbot - Doc 5:
+Figure 1-1. The transformers timeline
+But we’re getting ahead of ourselves. To understand what is novel about transformers,
+we first need to explain:
+• The encoder-decoder framework
+• Attention mechanisms
+• Transfer learning
+In this chapter we’ll introduce the core concepts that underlie the pervasiveness of
+transformers, take a tour of some of the tasks that they excel at, and conclude with a
+look at the Hugging Face ecosystem of tools and libraries.
+Let’s start by exploring the encoder-decoder framework and the architectures that
+preceded the rise of transformers.
+The Encoder-Decoder Framework
+Prior to transformers, recurrent architectures such as LSTMs were the state of the art
+in NLP . These architectures contain a feedback loop in the network connections that
+allows information to propagate from one step to another, making them ideal for
+modeling sequential data like text. As illustrated on the left side of Figure 1-2 , an
+---
+[2025-04-27 22:24:28] DEBUG - core.chatbot - Doc 6:
+
+---
+[2025-04-27 22:24:28] DEBUG - core.chatbot - Doc 7:
+Chapter 9, we’ll explore some techniques to deal with this situation.
+Now that we’ve seen what’s involved in training and sharing a transformer, in the next
+chapter we’ll explore implementing our very own transformer model from scratch.
+Conclusion | 55
+---
+[2025-04-27 22:24:28] INFO - core.chatbot - Context passed to LLM:
+
+
+
+
+
+
+
+
+Figure 1-1. The transformers timeline
+But we’re getting ahead of ourselves. To understand what is novel about transformers,
+we first need to explain:
+• The encoder-decoder framework
+• Attention mechanisms
+• Transfer learning
+In this chapter we’ll introduce the core concepts that underlie the pervasiveness of
+transformers, take a tour of some of the tasks that they excel at, and conclude with a
+look at the Hugging Face ecosystem of tools and libraries.
+Let’s start by exploring the encoder-decoder framework and the architectures that
+preceded the rise of transformers.
+The Encoder-Decoder Framework
+Prior to transformers, recurrent architectures such as LSTMs were the state of the art
+in NLP . These architectures contain a feedback loop in the network connections that
+allows information to propagate from one step to another, making them ideal for
+modeling sequential data like text. As illustrated on the left side of Figure 1-2 , an
+
+
+
+Chapter 9, we’ll explore some techniques to deal with this situation.
+Now that we’ve seen what’s involved in training and sharing a transformer, in the next
+chapter we’ll explore implementing our very own transformer model from scratch.
+Conclusion | 55
+[2025-04-27 22:24:28] INFO - core.chatbot - Short-term history: [HumanMessage(content='what is supervised machine learning algorithms', additional_kwargs={}, response_metadata={}), AIMessage(content='Answer: \n\nk-Nearest Neighbors, Linear Regression, Logistic Regression, Support Vector Machines (SVMs), Decision Trees and Random Forests, Neural networks', additional_kwargs={}, response_metadata={})]
+[2025-04-27 22:24:28] INFO - core.chatbot - Final Prompt given to LLM:
+[2025-04-27 22:24:28] INFO - core.chatbot - SYSTEM: 
+You are Llama 3, a helpful, concise, and knowledgeable AI assistant. 
+You answer questions strictly using only the information provided in <context>. 
+You do not use prior knowledge or make assumptions beyond the given context.
+
+Instructions:
+- If the answer is found in the context, answer concisely and accurately.
+- If the answer is not found in the context, reply exactly with:
+"I'm sorry, I could not find enough information to answer that."
+- Do not mention your limitations or training data.
+- Do not repeat the context in your answer.
+- Stay strictly within the Machine Learning domain.
+
+[2025-04-27 22:24:28] INFO - core.chatbot - HUMAN: what is supervised machine learning algorithms
+[2025-04-27 22:24:28] INFO - core.chatbot - AI: Answer: 
+
+k-Nearest Neighbors, Linear Regression, Logistic Regression, Support Vector Machines (SVMs), Decision Trees and Random Forests, Neural networks
+[2025-04-27 22:24:28] INFO - core.chatbot - HUMAN: 
+<context>
+
+
+
+
+
+
+
+
+Figure 1-1. The transformers timeline
+But we’re getting ahead of ourselves. To understand what is novel about transformers,
+we first need to explain:
+• The encoder-decoder framework
+• Attention mechanisms
+• Transfer learning
+In this chapter we’ll introduce the core concepts that underlie the pervasiveness of
+transformers, take a tour of some of the tasks that they excel at, and conclude with a
+look at the Hugging Face ecosystem of tools and libraries.
+Let’s start by exploring the encoder-decoder framework and the architectures that
+preceded the rise of transformers.
+The Encoder-Decoder Framework
+Prior to transformers, recurrent architectures such as LSTMs were the state of the art
+in NLP . These architectures contain a feedback loop in the network connections that
+allows information to propagate from one step to another, making them ideal for
+modeling sequential data like text. As illustrated on the left side of Figure 1-2 , an
+
+
+
+Chapter 9, we’ll explore some techniques to deal with this situation.
+Now that we’ve seen what’s involved in training and sharing a transformer, in the next
+chapter we’ll explore implementing our very own transformer model from scratch.
+Conclusion | 55
+</context>
+
+Question:
+do you have any knowledge regrading transformers?
+
+[2025-04-27 22:24:28] INFO - core.chatbot - Short-term memory updated.
+[2025-04-27 22:24:28] INFO - core.chatbot - Response generated successfully
+[2025-04-27 22:24:40] INFO - __main__ - User input: what are transformers
+[2025-04-27 22:24:40] DEBUG - error_handler - Calling function: get_chat_response
+[2025-04-27 22:24:40] INFO - core.chatbot - Processing question: what are transformers
+[2025-04-27 22:24:41] DEBUG - core.chatbot - Question: what are transformers
+[2025-04-27 22:24:41] DEBUG - core.chatbot - Number of docs retrieved: 7
+[2025-04-27 22:24:41] DEBUG - core.chatbot - Doc 1:
+
+---
+[2025-04-27 22:24:41] DEBUG - core.chatbot - Doc 3:
+
+---
+[2025-04-27 22:24:41] DEBUG - core.chatbot - Doc 4:
+Figure 1-1. The transformers timeline
+But we’re getting ahead of ourselves. To understand what is novel about transformers,
+we first need to explain:
+• The encoder-decoder framework
+• Attention mechanisms
+• Transfer learning
+In this chapter we’ll introduce the core concepts that underlie the pervasiveness of
+transformers, take a tour of some of the tasks that they excel at, and conclude with a
+look at the Hugging Face ecosystem of tools and libraries.
+Let’s start by exploring the encoder-decoder framework and the architectures that
+preceded the rise of transformers.
+The Encoder-Decoder Framework
+Prior to transformers, recurrent architectures such as LSTMs were the state of the art
+in NLP . These architectures contain a feedback loop in the network connections that
+allows information to propagate from one step to another, making them ideal for
+modeling sequential data like text. As illustrated on the left side of Figure 1-2 , an
+---
+[2025-04-27 22:24:41] DEBUG - core.chatbot - Doc 5:
+max_new_tokens=50,
+    do_sample=False,
+)
+An Overview of Transformer Models
+Let’s begin our exploration with a high-level overview of the model, and
+then we’ll see how later work has improved upon the Transformer model
+since its introduction in 2017.
+The Inputs and Outputs of a Trained Transformer LLM
+The most common picture of understanding the behavior of a Transformer
+LLM is to think of it as a software system that takes in text and generates
+text in response. Once a large enough text-in-text-out model is trained on a
+large enough high-quality dataset, it becomes able to generate impressive
+and useful outputs. Figure 3-1 shows one such model used to author an
+email.
+---
+[2025-04-27 22:24:41] DEBUG - core.chatbot - Doc 6:
+
+---
+[2025-04-27 22:24:41] DEBUG - core.chatbot - Doc 7:
+not necessary to use 
+  Transformers and fine-tune models for your use case, it can
+be helpful for comprehending and navigating the limitations of transformers and
+using them in new domains.
+This chapter also introduces a taxonomy of transformers to help you understand the
+zoo of models that have emerged in recent years. Before diving into the code, let’s
+start with an overview of the original architecture that kick-started the transformer
+revolution.
+The Transformer Architecture
+As we saw in Chapter 1 , the original Transformer is based on the encoder-decoder
+architecture that is widely used for tasks like machine translation, where a sequence
+of words is translated from one language to another. This architecture consists of two
+components:
+Encoder
+Converts an input sequence of tokens into a sequence of embedding vectors,
+often called the hidden state or context
+57
+---
+[2025-04-27 22:24:41] INFO - core.chatbot - Short-term history: [HumanMessage(content='what is supervised machine learning algorithms', additional_kwargs={}, response_metadata={}), AIMessage(content='Answer: \n\nk-Nearest Neighbors, Linear Regression, Logistic Regression, Support Vector Machines (SVMs), Decision Trees and Random Forests, Neural networks', additional_kwargs={}, response_metadata={}), HumanMessage(content='do you have any knowledge regrading transformers?', additional_kwargs={}, response_metadata={}), AIMessage(content="I'm sorry, I could not find enough information to answer that.", additional_kwargs={}, response_metadata={})]
+[2025-04-27 22:24:41] INFO - core.chatbot - Final Prompt given to LLM:
+[2025-04-27 22:24:41] INFO - core.chatbot - SYSTEM: 
+You are Llama 3, a helpful, concise, and knowledgeable AI assistant. 
+You answer questions strictly using only the information provided in <context>. 
+You do not use prior knowledge or make assumptions beyond the given context.
+
+Instructions:
+- If the answer is found in the context, answer concisely and accurately.
+- If the answer is not found in the context, reply exactly with:
+"I'm sorry, I could not find enough information to answer that."
+- Do not mention your limitations or training data.
+- Do not repeat the context in your answer.
+- Stay strictly within the Machine Learning domain.
+
+[2025-04-27 22:24:41] INFO - core.chatbot - HUMAN: what is supervised machine learning algorithms
+[2025-04-27 22:24:41] INFO - core.chatbot - AI: Answer: 
+
+k-Nearest Neighbors, Linear Regression, Logistic Regression, Support Vector Machines (SVMs), Decision Trees and Random Forests, Neural networks
+[2025-04-27 22:24:41] INFO - core.chatbot - HUMAN: do you have any knowledge regrading transformers?
+[2025-04-27 22:24:41] INFO - core.chatbot - AI: I'm sorry, I could not find enough information to answer that.
+[2025-04-27 22:24:42] INFO - core.chatbot - Short-term memory updated.
+[2025-04-27 22:24:42] INFO - core.chatbot - Response generated successfully
+[2025-04-27 22:24:59] INFO - __main__ - User input: give some details 
+[2025-04-27 22:24:59] DEBUG - error_handler - Calling function: get_chat_response
+[2025-04-27 22:24:59] INFO - core.chatbot - Processing question: give some details 
+[2025-04-27 22:25:00] DEBUG - core.chatbot - Question: give some details 
+[2025-04-27 22:25:00] DEBUG - core.chatbot - Number of docs retrieved: 7
+[2025-04-27 22:25:00] DEBUG - core.chatbot - Doc 1:
+an expert in astrophysics” if you want to ask a question about
+astrophysics.
+Instruction
+The task itself. Make sure this is as specific as possible. We do not want
+to leave much room for interpretation.
+Context
+Additional information describing the context of the problem or task. It
+answers questions like “What is the reason for the instruction?”
+Format
+The format the LLM should use to output the generated text. Without it,
+the LLM will come up with a format itself, which is troublesome in
+---
+[2025-04-27 22:25:00] DEBUG - core.chatbot - Doc 2:
+description for a product in less than two sentences and use a formal
+tone.”
+Hallucination
+LLMs may generate incorrect information confidently, which is referred
+to as hallucination. To reduce its impact, we can ask the LLM to only
+generate an answer if it knows the answer. If it does not know the
+answer, it can respond with “I don’t know.”
+Order
+Either begin or end your prompt with the instruction. Especially with
+long prompts, information in the middle is often forgotten.1  LLMs tend
+to focus on information either at the beginning of a prompt (primacy
+effect) or the end of a prompt (recency effect).
+Here, specificity is arguably the most important aspect. By restricting and
+specifying what the model should generate, there is a smaller chance of
+having it generate something not related to your use case. For instance, if
+we were to skip the instruction “in two to three sentences” it might generate
+complete paragraphs. Like human conversations, without any specific
+---
+[2025-04-27 22:25:00] DEBUG - core.chatbot - Doc 3:
+In-Context Learning: Providing Examples
+In the previous sections, we tried to accurately describe what the LLM
+should do. Although accurate and specific descriptions help the LLM to
+understand the use case, we can go one step further. Instead of describing
+the task, why do we not just show the task?
+We can provide the LLM with examples of exactly the thing that we want to
+achieve. This is often referred to as in-context learning, where we provide
+the model with correct examples.3 
+As illustrated in Figure 6-13, this comes in a number of forms depending on
+how many examples you show the LLM. Zero-shot prompting does not
+leverage examples, one-shot prompts use a single example, and few-shot
+prompts use two or more examples.
+Figure 6-13. An example of a complex prompt with many components.
+Adopting the original phrase, we believe that “an example is worth a
+thousand words.” These examples provide a direct example of what and
+how the LLM should achieve.
+---
+[2025-04-27 22:25:00] DEBUG - core.chatbot - Doc 4:
+automated systems.
+Audience
+The target of the generated text. This also describes the level of the
+generated output. For education purposes, it is often helpful to use ELI5
+(“Explain it like I’m 5”).
+Tone
+The tone of voice the LLM should use in the generated text. If you are
+writing a formal email to your boss, you might not want to use an
+informal tone of voice.
+Data
+The main data related to the task itself.
+To illustrate, let us extend the classification prompt we had earlier and use
+all of the preceding components. This is demonstrated in Figure 6-11.
+This complex prompt demonstrates the modular nature of prompting. We
+can add and remove components freely and judge their effect on the output.
+As illustrated in Figure 6-12, we can slowly build up our prompt and
+explore the effect of each change.
+The changes are not limited to simply introducing or removing components.
+Their order, as we saw before with the recency and primacy effects, can
+---
+[2025-04-27 22:25:00] DEBUG - core.chatbot - Doc 5:
+def format_prompt(example):
+    """Format the prompt to using the <|user|> template TinyLLama 
+is using"""
+    # Format answers
+    system = "<|system|>\n" + example["system"] + "</s>\n"
+    prompt = "<|user|>\n" + example["input"] + "
+</s>\n<|assistant|>\n"
+    chosen = example["chosen"] + "</s>\n"
+    rejected = example["rejected"] + "</s>\n"
+    return {
+        "prompt": system + prompt,
+        "chosen": chosen,
+        "rejected": rejected,
+    }
+# Apply formatting to the dataset and select relatively short 
+answers
+dpo_dataset = load_dataset(
+---
+[2025-04-27 22:25:00] DEBUG - core.chatbot - Doc 6:
+Providing Examples
+A simple and straightforward method to fix the output is to provide the
+generative model with examples of what the output should look like. As we
+explored before, few-shot learning is a helpful technique that guides the
+output of the generative model. This method can be generalized to guide the
+structure of the output as well.
+For example, let us consider an example where we want the generative
+model to create a character profile for an RPG game. We start by using no
+examples:
+# Zero-shot learning: Providing no examples
+zeroshot_prompt = [
+    {"role": "user", "content": "Create a character profile for 
+an RPG game in JSON format."}
+]
+# Generate the output
+outputs = pipe(zeroshot_prompt)
+print(outputs[0]["generated_text"])
+ ```json
+{
+  "characterProfile": {
+    "name": "Eldrin Stormbringer",
+    "class": "Warlock",
+    "race": "Half-Elf",
+    "age": 27,
+   "gender": "Male",
+    "alignment": "Chaotic Good",
+    "background": "Rogue",
+    …
+    },
+    "attributes": {
+---
+[2025-04-27 22:25:00] INFO - core.chatbot - Short-term history: [AIMessage(content='Answer: \n\nk-Nearest Neighbors, Linear Regression, Logistic Regression, Support Vector Machines (SVMs), Decision Trees and Random Forests, Neural networks', additional_kwargs={}, response_metadata={}), HumanMessage(content='do you have any knowledge regrading transformers?', additional_kwargs={}, response_metadata={}), AIMessage(content="I'm sorry, I could not find enough information to answer that.", additional_kwargs={}, response_metadata={}), HumanMessage(content='what are transformers', additional_kwargs={}, response_metadata={}), AIMessage(content='Answer: \n\nTransformers are a type of neural network architecture that is widely used for natural language processing (NLP) tasks. They are based on the encoder-decoder framework and use attention mechanisms to process sequential data like text.', additional_kwargs={}, response_metadata={})]
+[2025-04-27 22:25:00] INFO - core.chatbot - Final Prompt given to LLM:
+[2025-04-27 22:25:00] INFO - core.chatbot - SYSTEM: 
+You are Llama 3, a helpful, concise, and knowledgeable AI assistant. 
+You answer questions strictly using only the information provided in <context>. 
+You do not use prior knowledge or make assumptions beyond the given context.
+
+Instructions:
+- If the answer is found in the context, answer concisely and accurately.
+- If the answer is not found in the context, reply exactly with:
+"I'm sorry, I could not find enough information to answer that."
+- Do not mention your limitations or training data.
+- Do not repeat the context in your answer.
+- Stay strictly within the Machine Learning domain.
+
+[2025-04-27 22:25:00] INFO - core.chatbot - AI: Answer: 
+
+k-Nearest Neighbors, Linear Regression, Logistic Regression, Support Vector Machines (SVMs), Decision Trees and Random Forests, Neural networks
+[2025-04-27 22:25:00] INFO - core.chatbot - HUMAN: do you have any knowledge regrading transformers?
+[2025-04-27 22:25:00] INFO - core.chatbot - AI: I'm sorry, I could not find enough information to answer that.
+[2025-04-27 22:25:00] INFO - core.chatbot - HUMAN: what are transformers
+[2025-04-27 22:25:00] INFO - core.chatbot - AI: Answer: 
+
+Transformers are a type of neural network architecture that is widely used for natural language processing (NLP) tasks. They are based on the encoder-decoder framework and use attention mechanisms to process sequential data like text.
+[2025-04-27 22:25:00] INFO - core.chatbot - Short-term memory updated.
+[2025-04-27 22:25:00] INFO - core.chatbot - Response generated successfully
+[2025-04-27 22:25:11] INFO - __main__ - User input: about transformer
+[2025-04-27 22:25:11] DEBUG - error_handler - Calling function: get_chat_response
+[2025-04-27 22:25:11] INFO - core.chatbot - Processing question: about transformer
+[2025-04-27 22:25:12] DEBUG - core.chatbot - Question: about transformer
+[2025-04-27 22:25:12] DEBUG - core.chatbot - Number of docs retrieved: 7
+[2025-04-27 22:25:12] DEBUG - core.chatbot - Doc 2:
+
+---
+[2025-04-27 22:25:12] DEBUG - core.chatbot - Doc 3:
+
+---
+[2025-04-27 22:25:12] DEBUG - core.chatbot - Doc 4:
+Figure 1-1. The transformers timeline
+But we’re getting ahead of ourselves. To understand what is novel about transformers,
+we first need to explain:
+• The encoder-decoder framework
+• Attention mechanisms
+• Transfer learning
+In this chapter we’ll introduce the core concepts that underlie the pervasiveness of
+transformers, take a tour of some of the tasks that they excel at, and conclude with a
+look at the Hugging Face ecosystem of tools and libraries.
+Let’s start by exploring the encoder-decoder framework and the architectures that
+preceded the rise of transformers.
+The Encoder-Decoder Framework
+Prior to transformers, recurrent architectures such as LSTMs were the state of the art
+in NLP . These architectures contain a feedback loop in the network connections that
+allows information to propagate from one step to another, making them ideal for
+modeling sequential data like text. As illustrated on the left side of Figure 1-2 , an
+---
+[2025-04-27 22:25:12] DEBUG - core.chatbot - Doc 5:
+max_new_tokens=50,
+    do_sample=False,
+)
+An Overview of Transformer Models
+Let’s begin our exploration with a high-level overview of the model, and
+then we’ll see how later work has improved upon the Transformer model
+since its introduction in 2017.
+The Inputs and Outputs of a Trained Transformer LLM
+The most common picture of understanding the behavior of a Transformer
+LLM is to think of it as a software system that takes in text and generates
+text in response. Once a large enough text-in-text-out model is trained on a
+large enough high-quality dataset, it becomes able to generate impressive
+and useful outputs. Figure 3-1 shows one such model used to author an
+email.
+---
+[2025-04-27 22:25:12] DEBUG - core.chatbot - Doc 6:
+
+---
+[2025-04-27 22:25:12] DEBUG - core.chatbot - Doc 7:
+not necessary to use 
+  Transformers and fine-tune models for your use case, it can
+be helpful for comprehending and navigating the limitations of transformers and
+using them in new domains.
+This chapter also introduces a taxonomy of transformers to help you understand the
+zoo of models that have emerged in recent years. Before diving into the code, let’s
+start with an overview of the original architecture that kick-started the transformer
+revolution.
+The Transformer Architecture
+As we saw in Chapter 1 , the original Transformer is based on the encoder-decoder
+architecture that is widely used for tasks like machine translation, where a sequence
+of words is translated from one language to another. This architecture consists of two
+components:
+Encoder
+Converts an input sequence of tokens into a sequence of embedding vectors,
+often called the hidden state or context
+57
+---
+[2025-04-27 22:25:12] INFO - core.chatbot - Short-term history: [AIMessage(content="I'm sorry, I could not find enough information to answer that.", additional_kwargs={}, response_metadata={}), HumanMessage(content='what are transformers', additional_kwargs={}, response_metadata={}), AIMessage(content='Answer: \n\nTransformers are a type of neural network architecture that is widely used for natural language processing (NLP) tasks. They are based on the encoder-decoder framework and use attention mechanisms to process sequential data like text.', additional_kwargs={}, response_metadata={}), HumanMessage(content='give some details ', additional_kwargs={}, response_metadata={}), AIMessage(content='about machine learning \nmodels.', additional_kwargs={}, response_metadata={})]
+[2025-04-27 22:25:12] INFO - core.chatbot - Final Prompt given to LLM:
+[2025-04-27 22:25:12] INFO - core.chatbot - SYSTEM: 
+You are Llama 3, a helpful, concise, and knowledgeable AI assistant. 
+You answer questions strictly using only the information provided in <context>. 
+You do not use prior knowledge or make assumptions beyond the given context.
+
+Instructions:
+- If the answer is found in the context, answer concisely and accurately.
+- If the answer is not found in the context, reply exactly with:
+"I'm sorry, I could not find enough information to answer that."
+- Do not mention your limitations or training data.
+- Do not repeat the context in your answer.
+- Stay strictly within the Machine Learning domain.
+
+[2025-04-27 22:25:12] INFO - core.chatbot - AI: I'm sorry, I could not find enough information to answer that.
+[2025-04-27 22:25:12] INFO - core.chatbot - HUMAN: what are transformers
+[2025-04-27 22:25:12] INFO - core.chatbot - AI: Answer: 
+
+Transformers are a type of neural network architecture that is widely used for natural language processing (NLP) tasks. They are based on the encoder-decoder framework and use attention mechanisms to process sequential data like text.
+[2025-04-27 22:25:12] INFO - core.chatbot - HUMAN: give some details 
+[2025-04-27 22:25:12] INFO - core.chatbot - AI: about machine learning 
+models.
+[2025-04-27 22:25:12] INFO - core.chatbot - Short-term memory updated.
+[2025-04-27 22:25:12] INFO - core.chatbot - Response generated successfully
+[2025-04-27 22:25:16] INFO - __main__ - User input: models
+[2025-04-27 22:25:16] DEBUG - error_handler - Calling function: get_chat_response
+[2025-04-27 22:25:16] INFO - core.chatbot - Processing question: models
+[2025-04-27 22:25:17] DEBUG - core.chatbot - Question: models
+[2025-04-27 22:25:17] DEBUG - core.chatbot - Number of docs retrieved: 7
+[2025-04-27 22:25:17] DEBUG - core.chatbot - Doc 1:
+Open Models
+Open LLMs are models that share their weights and architecture with the
+public to use. They are still developed by specific organizations but often
+share their code for creating or running the model locally—with varying
+levels of licensing that may or may not allow commercial usage of the
+model. Cohere’s Command R, the Mistral models, Microsoft’s Phi, and
+Meta’s Llama models are all examples of open models.
+NOTE
+There are ongoing discussions as to what truly represents an open source model. For
+instance, some publicly shared models have a permissive commercial license, which
+means that the model cannot be used for commercial purposes. For many, this is not the
+true definition of open source, which states that using these models should not have any
+restrictions. Similarly, the data on which a model is trained as well as its source code are
+seldom shared.
+You can download these models and use them on your device as long as
+---
+[2025-04-27 22:25:17] DEBUG - core.chatbot - Doc 2:
+Part I. Understanding Language
+Models
+OceanofPDF.com
+---
+[2025-04-27 22:25:17] DEBUG - core.chatbot - Doc 3:
+
+---
+[2025-04-27 22:25:17] DEBUG - core.chatbot - Doc 5:
+
+---
+[2025-04-27 22:25:17] DEBUG - core.chatbot - Doc 6:
+model:
+Examples
+Provide a number of examples of the expected output.
+Grammar
+Control the token selection process.
+Fine-tuning
+Tune a model on data that contains the expected output.
+In this section, we will go through the first two methods. The third, fine-
+tuning a model, is left for Chapter 12 where we will go in depth into fine-
+tuning methods.
+---
+[2025-04-27 22:25:17] DEBUG - core.chatbot - Doc 7:
+general. As the name implies, the package was built on top of the
+transformers framework that we discussed in “A Recent History of
+Language AI”.
+At the time of writing, you will find more than 800,000 models on Hugging
+Face’s platform for many different purposes, from LLMs and computer
+vision models to models that work with audio and tabular data. Here, you
+can find almost any open source LLM.
+Although we will explore all kinds of models throughout this book, let’s
+start our first lines of code with a generative model. The main generative
+model we use throughout the book is Phi-3-mini, which is a relatively small
+(3.8 billion parameters) but quite performant model.16  Due to its small size,
+the model can be run on devices with less than 8 GB of VRAM. If you
+perform quantization, a type of compression that we will further discuss in
+Chapters 7 and 12, you can use even less than 6 GB of VRAM. Moreover,
+the model is licensed under the MIT license, which allows the model to be
+---
+[2025-04-27 22:25:17] INFO - core.chatbot - Short-term history: [AIMessage(content='Answer: \n\nTransformers are a type of neural network architecture that is widely used for natural language processing (NLP) tasks. They are based on the encoder-decoder framework and use attention mechanisms to process sequential data like text.', additional_kwargs={}, response_metadata={}), HumanMessage(content='give some details ', additional_kwargs={}, response_metadata={}), AIMessage(content='about machine learning \nmodels.', additional_kwargs={}, response_metadata={}), HumanMessage(content='about transformer', additional_kwargs={}, response_metadata={}), AIMessage(content='models.', additional_kwargs={}, response_metadata={})]
+[2025-04-27 22:25:17] INFO - core.chatbot - Final Prompt given to LLM:
+[2025-04-27 22:25:17] INFO - core.chatbot - SYSTEM: 
+You are Llama 3, a helpful, concise, and knowledgeable AI assistant. 
+You answer questions strictly using only the information provided in <context>. 
+You do not use prior knowledge or make assumptions beyond the given context.
+
+Instructions:
+- If the answer is found in the context, answer concisely and accurately.
+- If the answer is not found in the context, reply exactly with:
+"I'm sorry, I could not find enough information to answer that."
+- Do not mention your limitations or training data.
+- Do not repeat the context in your answer.
+- Stay strictly within the Machine Learning domain.
+
+[2025-04-27 22:25:17] INFO - core.chatbot - AI: Answer: 
+
+Transformers are a type of neural network architecture that is widely used for natural language processing (NLP) tasks. They are based on the encoder-decoder framework and use attention mechanisms to process sequential data like text.
+[2025-04-27 22:25:17] INFO - core.chatbot - HUMAN: give some details 
+[2025-04-27 22:25:17] INFO - core.chatbot - AI: about machine learning 
+models.
+[2025-04-27 22:25:17] INFO - core.chatbot - HUMAN: about transformer
+[2025-04-27 22:25:17] INFO - core.chatbot - AI: models.
+[2025-04-27 22:25:18] INFO - core.chatbot - Short-term memory updated.
+[2025-04-27 22:25:18] INFO - core.chatbot - Response generated successfully
+[2025-04-27 22:25:28] INFO - __main__ - User input: explain details
+[2025-04-27 22:25:28] DEBUG - error_handler - Calling function: get_chat_response
+[2025-04-27 22:25:28] INFO - core.chatbot - Processing question: explain details
+[2025-04-27 22:25:30] DEBUG - core.chatbot - Question: explain details
+[2025-04-27 22:25:30] DEBUG - core.chatbot - Number of docs retrieved: 7
+[2025-04-27 22:25:30] DEBUG - core.chatbot - Doc 1:
+an expert in astrophysics” if you want to ask a question about
+astrophysics.
+Instruction
+The task itself. Make sure this is as specific as possible. We do not want
+to leave much room for interpretation.
+Context
+Additional information describing the context of the problem or task. It
+answers questions like “What is the reason for the instruction?”
+Format
+The format the LLM should use to output the generated text. Without it,
+the LLM will come up with a format itself, which is troublesome in
+---
+[2025-04-27 22:25:30] DEBUG - core.chatbot - Doc 2:
+In-Context Learning: Providing Examples
+In the previous sections, we tried to accurately describe what the LLM
+should do. Although accurate and specific descriptions help the LLM to
+understand the use case, we can go one step further. Instead of describing
+the task, why do we not just show the task?
+We can provide the LLM with examples of exactly the thing that we want to
+achieve. This is often referred to as in-context learning, where we provide
+the model with correct examples.3 
+As illustrated in Figure 6-13, this comes in a number of forms depending on
+how many examples you show the LLM. Zero-shot prompting does not
+leverage examples, one-shot prompts use a single example, and few-shot
+prompts use two or more examples.
+Figure 6-13. An example of a complex prompt with many components.
+Adopting the original phrase, we believe that “an example is worth a
+thousand words.” These examples provide a direct example of what and
+how the LLM should achieve.
+---
+[2025-04-27 22:25:30] DEBUG - core.chatbot - Doc 3:
+model:
+Examples
+Provide a number of examples of the expected output.
+Grammar
+Control the token selection process.
+Fine-tuning
+Tune a model on data that contains the expected output.
+In this section, we will go through the first two methods. The third, fine-
+tuning a model, is left for Chapter 12 where we will go in depth into fine-
+tuning methods.
+---
+[2025-04-27 22:25:30] DEBUG - core.chatbot - Doc 4:
+This shows us the model generated the token 3323, 'Sub', followed by
+token 622, 'ject'. Together they formed the word 'Subject'. They
+were then followed by token 29901, which is the colon ':'...and so on.
+Just like on the input side, we need the tokenizer on the output side to
+translate the token ID into the actual text. We do that using the tokenizer’s
+decode method. We can pass it an individual token ID or a list of them:
+print(tokenizer.decode(3323))
+print(tokenizer.decode(622))
+print(tokenizer.decode([3323, 622]))
+print(tokenizer.decode(29901))
+This outputs:
+Sub
+ject
+Subject
+:
+How Does the Tokenizer Break Down Text?
+There are three major factors that dictate how a tokenizer breaks down an
+input prompt.
+First, at model design time, the creator of the model chooses a tokenization
+method. Popular methods include byte pair encoding (BPE) (widely used by
+GPT models) and WordPiece (used by BERT). These methods are similar in
+---
+[2025-04-27 22:25:30] DEBUG - core.chatbot - Doc 5:
+description for a product in less than two sentences and use a formal
+tone.”
+Hallucination
+LLMs may generate incorrect information confidently, which is referred
+to as hallucination. To reduce its impact, we can ask the LLM to only
+generate an answer if it knows the answer. If it does not know the
+answer, it can respond with “I don’t know.”
+Order
+Either begin or end your prompt with the instruction. Especially with
+long prompts, information in the middle is often forgotten.1  LLMs tend
+to focus on information either at the beginning of a prompt (primacy
+effect) or the end of a prompt (recency effect).
+Here, specificity is arguably the most important aspect. By restricting and
+specifying what the model should generate, there is a smaller chance of
+having it generate something not related to your use case. For instance, if
+we were to skip the instruction “in two to three sentences” it might generate
+complete paragraphs. Like human conversations, without any specific
+---
+[2025-04-27 22:25:30] DEBUG - core.chatbot - Doc 6:
+that define the concept but also the features that are not related. We get
+more information when we frame a question as a contrast. We further
+illustrate this concept of contrastive explanation in Figure 10-5.
+Figure 10-5. When we feed an embedding model different contrasts (degrees of similarity), it starts to
+learn what makes things different from one another and thereby the distinctive characteristics of
+concepts.
+NOTE
+One of the earliest and most popular examples of contrastive learning in NLP is actually
+word2vec, as we discussed in Chapters 1 and 2. The model learns word representations
+by training on individual words in a sentence. A word close to a target word in a
+sentence will be constructed as a positive pair whereas randomly sampled words
+constitute dissimilar pairs. In other words, positive examples of neighboring words are
+contrasted with randomly selected words that are not neighbors. Although not widely
+---
+[2025-04-27 22:25:30] DEBUG - core.chatbot - Doc 7:
+contrasting procedure is quite powerful and relates to the context in which
+documents are written. This high-level procedure is demonstrated in
+Figure 10-4.
+Figure 10-4. Contrastive learning aims to teach an embedding model whether documents are similar
+or dissimilar. It does so by presenting groups of documents to a model that are similar or dissimilar
+to a certain degree.
+Another way to look at contrastive learning is through the nature of
+explanations. A nice example of this is an anecdotal story of a reporter
+asking a robber “Why did you rob a bank?” to which he answers, “Because
+that is where the money is.”1  Although a factually correct answer, the intent
+of the question was not why he robs banks specifically but why he robs at
+all. This is called contrastive explanation and refers to understanding a
+particular case, “Why P?” in contrast to alternatives, “Why P and not Q?”2 
+In the example, the question could be interpreted in a number of ways and
+---
+[2025-04-27 22:25:30] INFO - core.chatbot - Context passed to LLM:
+an expert in astrophysics” if you want to ask a question about
+astrophysics.
+Instruction
+The task itself. Make sure this is as specific as possible. We do not want
+to leave much room for interpretation.
+Context
+Additional information describing the context of the problem or task. It
+answers questions like “What is the reason for the instruction?”
+Format
+The format the LLM should use to output the generated text. Without it,
+the LLM will come up with a format itself, which is troublesome in
+
+In-Context Learning: Providing Examples
+In the previous sections, we tried to accurately describe what the LLM
+should do. Although accurate and specific descriptions help the LLM to
+understand the use case, we can go one step further. Instead of describing
+the task, why do we not just show the task?
+We can provide the LLM with examples of exactly the thing that we want to
+achieve. This is often referred to as in-context learning, where we provide
+the model with correct examples.3 
+As illustrated in Figure 6-13, this comes in a number of forms depending on
+how many examples you show the LLM. Zero-shot prompting does not
+leverage examples, one-shot prompts use a single example, and few-shot
+prompts use two or more examples.
+Figure 6-13. An example of a complex prompt with many components.
+Adopting the original phrase, we believe that “an example is worth a
+thousand words.” These examples provide a direct example of what and
+how the LLM should achieve.
+
+model:
+Examples
+Provide a number of examples of the expected output.
+Grammar
+Control the token selection process.
+Fine-tuning
+Tune a model on data that contains the expected output.
+In this section, we will go through the first two methods. The third, fine-
+tuning a model, is left for Chapter 12 where we will go in depth into fine-
+tuning methods.
+
+This shows us the model generated the token 3323, 'Sub', followed by
+token 622, 'ject'. Together they formed the word 'Subject'. They
+were then followed by token 29901, which is the colon ':'...and so on.
+Just like on the input side, we need the tokenizer on the output side to
+translate the token ID into the actual text. We do that using the tokenizer’s
+decode method. We can pass it an individual token ID or a list of them:
+print(tokenizer.decode(3323))
+print(tokenizer.decode(622))
+print(tokenizer.decode([3323, 622]))
+print(tokenizer.decode(29901))
+This outputs:
+Sub
+ject
+Subject
+:
+How Does the Tokenizer Break Down Text?
+There are three major factors that dictate how a tokenizer breaks down an
+input prompt.
+First, at model design time, the creator of the model chooses a tokenization
+method. Popular methods include byte pair encoding (BPE) (widely used by
+GPT models) and WordPiece (used by BERT). These methods are similar in
+
+description for a product in less than two sentences and use a formal
+tone.”
+Hallucination
+LLMs may generate incorrect information confidently, which is referred
+to as hallucination. To reduce its impact, we can ask the LLM to only
+generate an answer if it knows the answer. If it does not know the
+answer, it can respond with “I don’t know.”
+Order
+Either begin or end your prompt with the instruction. Especially with
+long prompts, information in the middle is often forgotten.1  LLMs tend
+to focus on information either at the beginning of a prompt (primacy
+effect) or the end of a prompt (recency effect).
+Here, specificity is arguably the most important aspect. By restricting and
+specifying what the model should generate, there is a smaller chance of
+having it generate something not related to your use case. For instance, if
+we were to skip the instruction “in two to three sentences” it might generate
+complete paragraphs. Like human conversations, without any specific
+
+that define the concept but also the features that are not related. We get
+more information when we frame a question as a contrast. We further
+illustrate this concept of contrastive explanation in Figure 10-5.
+Figure 10-5. When we feed an embedding model different contrasts (degrees of similarity), it starts to
+learn what makes things different from one another and thereby the distinctive characteristics of
+concepts.
+NOTE
+One of the earliest and most popular examples of contrastive learning in NLP is actually
+word2vec, as we discussed in Chapters 1 and 2. The model learns word representations
+by training on individual words in a sentence. A word close to a target word in a
+sentence will be constructed as a positive pair whereas randomly sampled words
+constitute dissimilar pairs. In other words, positive examples of neighboring words are
+contrasted with randomly selected words that are not neighbors. Although not widely
+
+contrasting procedure is quite powerful and relates to the context in which
+documents are written. This high-level procedure is demonstrated in
+Figure 10-4.
+Figure 10-4. Contrastive learning aims to teach an embedding model whether documents are similar
+or dissimilar. It does so by presenting groups of documents to a model that are similar or dissimilar
+to a certain degree.
+Another way to look at contrastive learning is through the nature of
+explanations. A nice example of this is an anecdotal story of a reporter
+asking a robber “Why did you rob a bank?” to which he answers, “Because
+that is where the money is.”1  Although a factually correct answer, the intent
+of the question was not why he robs banks specifically but why he robs at
+all. This is called contrastive explanation and refers to understanding a
+particular case, “Why P?” in contrast to alternatives, “Why P and not Q?”2 
+In the example, the question could be interpreted in a number of ways and
+[2025-04-27 22:25:30] INFO - core.chatbot - Short-term history: [AIMessage(content='about machine learning \nmodels.', additional_kwargs={}, response_metadata={}), HumanMessage(content='about transformer', additional_kwargs={}, response_metadata={}), AIMessage(content='models.', additional_kwargs={}, response_metadata={}), HumanMessage(content='models', additional_kwargs={}, response_metadata={}), AIMessage(content='AI: Transformers are a type of neural network architecture that is widely used for natural language processing (NLP) tasks. They are based on the encoder-decoder framework and use attention mechanisms to process sequential data like text.', additional_kwargs={}, response_metadata={})]
+[2025-04-27 22:25:30] INFO - core.chatbot - Final Prompt given to LLM:
+[2025-04-27 22:25:30] INFO - core.chatbot - SYSTEM: 
+You are Llama 3, a helpful, concise, and knowledgeable AI assistant. 
+You answer questions strictly using only the information provided in <context>. 
+You do not use prior knowledge or make assumptions beyond the given context.
+
+Instructions:
+- If the answer is found in the context, answer concisely and accurately.
+- If the answer is not found in the context, reply exactly with:
+"I'm sorry, I could not find enough information to answer that."
+- Do not mention your limitations or training data.
+- Do not repeat the context in your answer.
+- Stay strictly within the Machine Learning domain.
+
+[2025-04-27 22:25:30] INFO - core.chatbot - AI: about machine learning 
+models.
+[2025-04-27 22:25:30] INFO - core.chatbot - HUMAN: about transformer
+[2025-04-27 22:25:30] INFO - core.chatbot - AI: models.
+[2025-04-27 22:25:30] INFO - core.chatbot - HUMAN: models
+[2025-04-27 22:25:30] INFO - core.chatbot - AI: AI: Transformers are a type of neural network architecture that is widely used for natural language processing (NLP) tasks. They are based on the encoder-decoder framework and use attention mechanisms to process sequential data like text.
+[2025-04-27 22:25:30] INFO - core.chatbot - HUMAN: 
+<context>
+an expert in astrophysics” if you want to ask a question about
+astrophysics.
+Instruction
+The task itself. Make sure this is as specific as possible. We do not want
+to leave much room for interpretation.
+Context
+Additional information describing the context of the problem or task. It
+answers questions like “What is the reason for the instruction?”
+Format
+The format the LLM should use to output the generated text. Without it,
+the LLM will come up with a format itself, which is troublesome in
+
+In-Context Learning: Providing Examples
+In the previous sections, we tried to accurately describe what the LLM
+should do. Although accurate and specific descriptions help the LLM to
+understand the use case, we can go one step further. Instead of describing
+the task, why do we not just show the task?
+We can provide the LLM with examples of exactly the thing that we want to
+achieve. This is often referred to as in-context learning, where we provide
+the model with correct examples.3 
+As illustrated in Figure 6-13, this comes in a number of forms depending on
+how many examples you show the LLM. Zero-shot prompting does not
+leverage examples, one-shot prompts use a single example, and few-shot
+prompts use two or more examples.
+Figure 6-13. An example of a complex prompt with many components.
+Adopting the original phrase, we believe that “an example is worth a
+thousand words.” These examples provide a direct example of what and
+how the LLM should achieve.
+
+model:
+Examples
+Provide a number of examples of the expected output.
+Grammar
+Control the token selection process.
+Fine-tuning
+Tune a model on data that contains the expected output.
+In this section, we will go through the first two methods. The third, fine-
+tuning a model, is left for Chapter 12 where we will go in depth into fine-
+tuning methods.
+
+This shows us the model generated the token 3323, 'Sub', followed by
+token 622, 'ject'. Together they formed the word 'Subject'. They
+were then followed by token 29901, which is the colon ':'...and so on.
+Just like on the input side, we need the tokenizer on the output side to
+translate the token ID into the actual text. We do that using the tokenizer’s
+decode method. We can pass it an individual token ID or a list of them:
+print(tokenizer.decode(3323))
+print(tokenizer.decode(622))
+print(tokenizer.decode([3323, 622]))
+print(tokenizer.decode(29901))
+This outputs:
+Sub
+ject
+Subject
+:
+How Does the Tokenizer Break Down Text?
+There are three major factors that dictate how a tokenizer breaks down an
+input prompt.
+First, at model design time, the creator of the model chooses a tokenization
+method. Popular methods include byte pair encoding (BPE) (widely used by
+GPT models) and WordPiece (used by BERT). These methods are similar in
+
+description for a product in less than two sentences and use a formal
+tone.”
+Hallucination
+LLMs may generate incorrect information confidently, which is referred
+to as hallucination. To reduce its impact, we can ask the LLM to only
+generate an answer if it knows the answer. If it does not know the
+answer, it can respond with “I don’t know.”
+Order
+Either begin or end your prompt with the instruction. Especially with
+long prompts, information in the middle is often forgotten.1  LLMs tend
+to focus on information either at the beginning of a prompt (primacy
+effect) or the end of a prompt (recency effect).
+Here, specificity is arguably the most important aspect. By restricting and
+specifying what the model should generate, there is a smaller chance of
+having it generate something not related to your use case. For instance, if
+we were to skip the instruction “in two to three sentences” it might generate
+complete paragraphs. Like human conversations, without any specific
+
+that define the concept but also the features that are not related. We get
+more information when we frame a question as a contrast. We further
+illustrate this concept of contrastive explanation in Figure 10-5.
+Figure 10-5. When we feed an embedding model different contrasts (degrees of similarity), it starts to
+learn what makes things different from one another and thereby the distinctive characteristics of
+concepts.
+NOTE
+One of the earliest and most popular examples of contrastive learning in NLP is actually
+word2vec, as we discussed in Chapters 1 and 2. The model learns word representations
+by training on individual words in a sentence. A word close to a target word in a
+sentence will be constructed as a positive pair whereas randomly sampled words
+constitute dissimilar pairs. In other words, positive examples of neighboring words are
+contrasted with randomly selected words that are not neighbors. Although not widely
+
+contrasting procedure is quite powerful and relates to the context in which
+documents are written. This high-level procedure is demonstrated in
+Figure 10-4.
+Figure 10-4. Contrastive learning aims to teach an embedding model whether documents are similar
+or dissimilar. It does so by presenting groups of documents to a model that are similar or dissimilar
+to a certain degree.
+Another way to look at contrastive learning is through the nature of
+explanations. A nice example of this is an anecdotal story of a reporter
+asking a robber “Why did you rob a bank?” to which he answers, “Because
+that is where the money is.”1  Although a factually correct answer, the intent
+of the question was not why he robs banks specifically but why he robs at
+all. This is called contrastive explanation and refers to understanding a
+particular case, “Why P?” in contrast to alternatives, “Why P and not Q?”2 
+In the example, the question could be interpreted in a number of ways and
+</context>
+
+Question:
+explain details
+
+[2025-04-27 22:25:31] INFO - core.chatbot - Short-term memory updated.
+[2025-04-27 22:25:31] INFO - core.chatbot - Response generated successfully
+[2025-04-27 22:25:33] INFO - __main__ - User input: yes
+[2025-04-27 22:25:33] DEBUG - error_handler - Calling function: get_chat_response
+[2025-04-27 22:25:33] INFO - core.chatbot - Processing question: yes
+[2025-04-27 22:25:34] DEBUG - core.chatbot - Question: yes
+[2025-04-27 22:25:34] DEBUG - core.chatbot - Number of docs retrieved: 7
+[2025-04-27 22:25:34] DEBUG - core.chatbot - Doc 1:
+('documents', 0.012383715497143821),
+ ('modeling', 0.011978375291037142),
+ ('dirichlet', 0.010078277589545706),
+ ('word', 0.008505619415413312),
+ ('allocation', 0.007930890698168108)]
+Although we know that this topic is about topic modeling, let’s see if the
+BERTopic abstract is also assigned to this topic:
+topic_model.topics_[titles.index("BERTopic: Neural topic modeling 
+with a class-based TF-IDF procedure")]
+22
+It is! These functionalities allow us to quickly find the topics that we are
+interested in.
+TIP
+The modularity of BERTopic gives you a lot of choices, which can be overwhelming.
+For that purpose, the author created a best practices guide that goes through common
+practices to speed up training, improve representations, and more.
+To make exploration of the topics a bit easier, we can look back at our text
+clustering example. There, we created a static visualization to see the
+general structure of the created topic. With BERTopic, we can create an
+---
+[2025-04-27 22:25:34] DEBUG - core.chatbot - Doc 2:
+for hit in bm25_hits[0:top_k]:
+        print("\t{:.3f}\t{}".format(hit['score'], 
+texts[hit['corpus_id']].replace("\n", " ")))
+   
+    #Add re-ranking
+    docs = [texts[hit['corpus_id']] for hit in bm25_hits]
+    
+    print(f"\nTop-3 hits by rank-API ({len(bm25_hits)} BM25 hits 
+re-ranked)")
+    results = co.rerank(query=query, documents=docs, top_n=top_k, 
+return_documents=True)
+    # print(results.results)
+    for hit in results.results:
+        # print(hit)
+        print("\t{:.3f}\t{}".format(hit.relevance_score, 
+hit.document.text.replace("\n", " ")))
+Now we can send our query and check the results of keyword search and
+then the result of keyword search shortlisting its top 10 results, then pass
+them on to the reranker:
+keyword_and_reranking_search(query = "how precise was the 
+science")
+Results:
+Input question: how precise was the science
+Top-3 lexical search (BM25) hits
+1.789 Interstellar is a 2014 epic science fiction film co-
+written, directed, and produced by Christopher Nolan
+---
+[2025-04-27 22:25:34] DEBUG - core.chatbot - Doc 3:
+
+---
+[2025-04-27 22:25:34] DEBUG - core.chatbot - Doc 4:
+true_predictions = []
+    true_labels = []
+    # Document-level iteration
+    for prediction, label in zip(predictions, labels):
+      # Token-level iteration
+      for token_prediction, token_label in zip(prediction, label):
+        # We ignore special tokens
+        if token_label != -100:
+          true_predictions.append([id2label[token_prediction]])
+          true_labels.append([id2label[token_label]])
+    results = seqeval.compute(
+    predictions=true_predictions, references=true_labels
+---
+[2025-04-27 22:25:34] DEBUG - core.chatbot - Doc 5:
+
+---
+[2025-04-27 22:25:34] DEBUG - core.chatbot - Doc 6:
+
+---
+[2025-04-27 22:25:34] DEBUG - core.chatbot - Doc 7:
+reverse=True)
+    
+    print(f"Top-3 lexical search (BM25) hits")
+    for hit in bm25_hits[0:top_k]:
+        print("\t{:.3f}\t{}".format(hit['score'], 
+texts[hit['corpus_id']].replace("\n", " ")))
+Now when we search for the same query, we get a different set of results
+from the dense retrieval search:
+keyword_search(query = "how precise was the science")
+---
+[2025-04-27 22:25:34] INFO - core.chatbot - Context passed to LLM:
+('documents', 0.012383715497143821),
+ ('modeling', 0.011978375291037142),
+ ('dirichlet', 0.010078277589545706),
+ ('word', 0.008505619415413312),
+ ('allocation', 0.007930890698168108)]
+Although we know that this topic is about topic modeling, let’s see if the
+BERTopic abstract is also assigned to this topic:
+topic_model.topics_[titles.index("BERTopic: Neural topic modeling 
+with a class-based TF-IDF procedure")]
+22
+It is! These functionalities allow us to quickly find the topics that we are
+interested in.
+TIP
+The modularity of BERTopic gives you a lot of choices, which can be overwhelming.
+For that purpose, the author created a best practices guide that goes through common
+practices to speed up training, improve representations, and more.
+To make exploration of the topics a bit easier, we can look back at our text
+clustering example. There, we created a static visualization to see the
+general structure of the created topic. With BERTopic, we can create an
+
+for hit in bm25_hits[0:top_k]:
+        print("\t{:.3f}\t{}".format(hit['score'], 
+texts[hit['corpus_id']].replace("\n", " ")))
+   
+    #Add re-ranking
+    docs = [texts[hit['corpus_id']] for hit in bm25_hits]
+    
+    print(f"\nTop-3 hits by rank-API ({len(bm25_hits)} BM25 hits 
+re-ranked)")
+    results = co.rerank(query=query, documents=docs, top_n=top_k, 
+return_documents=True)
+    # print(results.results)
+    for hit in results.results:
+        # print(hit)
+        print("\t{:.3f}\t{}".format(hit.relevance_score, 
+hit.document.text.replace("\n", " ")))
+Now we can send our query and check the results of keyword search and
+then the result of keyword search shortlisting its top 10 results, then pass
+them on to the reranker:
+keyword_and_reranking_search(query = "how precise was the 
+science")
+Results:
+Input question: how precise was the science
+Top-3 lexical search (BM25) hits
+1.789 Interstellar is a 2014 epic science fiction film co-
+written, directed, and produced by Christopher Nolan
+
+
+
+true_predictions = []
+    true_labels = []
+    # Document-level iteration
+    for prediction, label in zip(predictions, labels):
+      # Token-level iteration
+      for token_prediction, token_label in zip(prediction, label):
+        # We ignore special tokens
+        if token_label != -100:
+          true_predictions.append([id2label[token_prediction]])
+          true_labels.append([id2label[token_label]])
+    results = seqeval.compute(
+    predictions=true_predictions, references=true_labels
+
+
+
+
+
+reverse=True)
+    
+    print(f"Top-3 lexical search (BM25) hits")
+    for hit in bm25_hits[0:top_k]:
+        print("\t{:.3f}\t{}".format(hit['score'], 
+texts[hit['corpus_id']].replace("\n", " ")))
+Now when we search for the same query, we get a different set of results
+from the dense retrieval search:
+keyword_search(query = "how precise was the science")
+[2025-04-27 22:25:34] INFO - core.chatbot - Short-term history: [AIMessage(content='models.', additional_kwargs={}, response_metadata={}), HumanMessage(content='models', additional_kwargs={}, response_metadata={}), AIMessage(content='AI: Transformers are a type of neural network architecture that is widely used for natural language processing (NLP) tasks. They are based on the encoder-decoder framework and use attention mechanisms to process sequential data like text.', additional_kwargs={}, response_metadata={}), HumanMessage(content='explain details', additional_kwargs={}, response_metadata={}), AIMessage(content='about transformer \nmodels.', additional_kwargs={}, response_metadata={})]
+[2025-04-27 22:25:34] INFO - core.chatbot - Final Prompt given to LLM:
+[2025-04-27 22:25:34] INFO - core.chatbot - SYSTEM: 
+You are Llama 3, a helpful, concise, and knowledgeable AI assistant. 
+You answer questions strictly using only the information provided in <context>. 
+You do not use prior knowledge or make assumptions beyond the given context.
+
+Instructions:
+- If the answer is found in the context, answer concisely and accurately.
+- If the answer is not found in the context, reply exactly with:
+"I'm sorry, I could not find enough information to answer that."
+- Do not mention your limitations or training data.
+- Do not repeat the context in your answer.
+- Stay strictly within the Machine Learning domain.
+
+[2025-04-27 22:25:34] INFO - core.chatbot - AI: models.
+[2025-04-27 22:25:34] INFO - core.chatbot - HUMAN: models
+[2025-04-27 22:25:34] INFO - core.chatbot - AI: AI: Transformers are a type of neural network architecture that is widely used for natural language processing (NLP) tasks. They are based on the encoder-decoder framework and use attention mechanisms to process sequential data like text.
+[2025-04-27 22:25:34] INFO - core.chatbot - HUMAN: explain details
+[2025-04-27 22:25:34] INFO - core.chatbot - AI: about transformer 
+models.
+[2025-04-27 22:25:34] INFO - core.chatbot - HUMAN: 
+<context>
+('documents', 0.012383715497143821),
+ ('modeling', 0.011978375291037142),
+ ('dirichlet', 0.010078277589545706),
+ ('word', 0.008505619415413312),
+ ('allocation', 0.007930890698168108)]
+Although we know that this topic is about topic modeling, let’s see if the
+BERTopic abstract is also assigned to this topic:
+topic_model.topics_[titles.index("BERTopic: Neural topic modeling 
+with a class-based TF-IDF procedure")]
+22
+It is! These functionalities allow us to quickly find the topics that we are
+interested in.
+TIP
+The modularity of BERTopic gives you a lot of choices, which can be overwhelming.
+For that purpose, the author created a best practices guide that goes through common
+practices to speed up training, improve representations, and more.
+To make exploration of the topics a bit easier, we can look back at our text
+clustering example. There, we created a static visualization to see the
+general structure of the created topic. With BERTopic, we can create an
+
+for hit in bm25_hits[0:top_k]:
+        print("\t{:.3f}\t{}".format(hit['score'], 
+texts[hit['corpus_id']].replace("\n", " ")))
+   
+    #Add re-ranking
+    docs = [texts[hit['corpus_id']] for hit in bm25_hits]
+    
+    print(f"\nTop-3 hits by rank-API ({len(bm25_hits)} BM25 hits 
+re-ranked)")
+    results = co.rerank(query=query, documents=docs, top_n=top_k, 
+return_documents=True)
+    # print(results.results)
+    for hit in results.results:
+        # print(hit)
+        print("\t{:.3f}\t{}".format(hit.relevance_score, 
+hit.document.text.replace("\n", " ")))
+Now we can send our query and check the results of keyword search and
+then the result of keyword search shortlisting its top 10 results, then pass
+them on to the reranker:
+keyword_and_reranking_search(query = "how precise was the 
+science")
+Results:
+Input question: how precise was the science
+Top-3 lexical search (BM25) hits
+1.789 Interstellar is a 2014 epic science fiction film co-
+written, directed, and produced by Christopher Nolan
+
+
+
+true_predictions = []
+    true_labels = []
+    # Document-level iteration
+    for prediction, label in zip(predictions, labels):
+      # Token-level iteration
+      for token_prediction, token_label in zip(prediction, label):
+        # We ignore special tokens
+        if token_label != -100:
+          true_predictions.append([id2label[token_prediction]])
+          true_labels.append([id2label[token_label]])
+    results = seqeval.compute(
+    predictions=true_predictions, references=true_labels
+
+
+
+
+
+reverse=True)
+    
+    print(f"Top-3 lexical search (BM25) hits")
+    for hit in bm25_hits[0:top_k]:
+        print("\t{:.3f}\t{}".format(hit['score'], 
+texts[hit['corpus_id']].replace("\n", " ")))
+Now when we search for the same query, we get a different set of results
+from the dense retrieval search:
+keyword_search(query = "how precise was the science")
+</context>
+
+Question:
+yes
+
+[2025-04-27 22:25:34] INFO - core.chatbot - Short-term memory updated.
+[2025-04-27 22:25:34] INFO - core.chatbot - Response generated successfully
+[2025-04-27 22:25:57] INFO - __main__ - User input: what is transformers explain in details
+[2025-04-27 22:25:57] DEBUG - error_handler - Calling function: get_chat_response
+[2025-04-27 22:25:57] INFO - core.chatbot - Processing question: what is transformers explain in details
+[2025-04-27 22:25:58] DEBUG - core.chatbot - Question: what is transformers explain in details
+[2025-04-27 22:25:58] DEBUG - core.chatbot - Number of docs retrieved: 7
+[2025-04-27 22:25:58] DEBUG - core.chatbot - Doc 1:
+
+---
+[2025-04-27 22:25:58] DEBUG - core.chatbot - Doc 2:
+Figure 1-1. The transformers timeline
+But we’re getting ahead of ourselves. To understand what is novel about transformers,
+we first need to explain:
+• The encoder-decoder framework
+• Attention mechanisms
+• Transfer learning
+In this chapter we’ll introduce the core concepts that underlie the pervasiveness of
+transformers, take a tour of some of the tasks that they excel at, and conclude with a
+look at the Hugging Face ecosystem of tools and libraries.
+Let’s start by exploring the encoder-decoder framework and the architectures that
+preceded the rise of transformers.
+The Encoder-Decoder Framework
+Prior to transformers, recurrent architectures such as LSTMs were the state of the art
+in NLP . These architectures contain a feedback loop in the network connections that
+allows information to propagate from one step to another, making them ideal for
+modeling sequential data like text. As illustrated on the left side of Figure 1-2 , an
+---
+[2025-04-27 22:25:58] DEBUG - core.chatbot - Doc 4:
+
+---
+[2025-04-27 22:25:58] DEBUG - core.chatbot - Doc 5:
+
+---
+[2025-04-27 22:25:58] DEBUG - core.chatbot - Doc 6:
+not necessary to use 
+  Transformers and fine-tune models for your use case, it can
+be helpful for comprehending and navigating the limitations of transformers and
+using them in new domains.
+This chapter also introduces a taxonomy of transformers to help you understand the
+zoo of models that have emerged in recent years. Before diving into the code, let’s
+start with an overview of the original architecture that kick-started the transformer
+revolution.
+The Transformer Architecture
+As we saw in Chapter 1 , the original Transformer is based on the encoder-decoder
+architecture that is widely used for tasks like machine translation, where a sequence
+of words is translated from one language to another. This architecture consists of two
+components:
+Encoder
+Converts an input sequence of tokens into a sequence of embedding vectors,
+often called the hidden state or context
+57
+---
+[2025-04-27 22:25:58] DEBUG - core.chatbot - Doc 7:
+max_new_tokens=50,
+    do_sample=False,
+)
+An Overview of Transformer Models
+Let’s begin our exploration with a high-level overview of the model, and
+then we’ll see how later work has improved upon the Transformer model
+since its introduction in 2017.
+The Inputs and Outputs of a Trained Transformer LLM
+The most common picture of understanding the behavior of a Transformer
+LLM is to think of it as a software system that takes in text and generates
+text in response. Once a large enough text-in-text-out model is trained on a
+large enough high-quality dataset, it becomes able to generate impressive
+and useful outputs. Figure 3-1 shows one such model used to author an
+email.
+---
+[2025-04-27 22:25:58] INFO - core.chatbot - Short-term history: [AIMessage(content='AI: Transformers are a type of neural network architecture that is widely used for natural language processing (NLP) tasks. They are based on the encoder-decoder framework and use attention mechanisms to process sequential data like text.', additional_kwargs={}, response_metadata={}), HumanMessage(content='explain details', additional_kwargs={}, response_metadata={}), AIMessage(content='about transformer \nmodels.', additional_kwargs={}, response_metadata={}), HumanMessage(content='yes', additional_kwargs={}, response_metadata={}), AIMessage(content='Human:', additional_kwargs={}, response_metadata={})]
+[2025-04-27 22:25:58] INFO - core.chatbot - Final Prompt given to LLM:
+[2025-04-27 22:25:58] INFO - core.chatbot - SYSTEM: 
+You are Llama 3, a helpful, concise, and knowledgeable AI assistant. 
+You answer questions strictly using only the information provided in <context>. 
+You do not use prior knowledge or make assumptions beyond the given context.
+
+Instructions:
+- If the answer is found in the context, answer concisely and accurately.
+- If the answer is not found in the context, reply exactly with:
+"I'm sorry, I could not find enough information to answer that."
+- Do not mention your limitations or training data.
+- Do not repeat the context in your answer.
+- Stay strictly within the Machine Learning domain.
+
+[2025-04-27 22:25:58] INFO - core.chatbot - AI: AI: Transformers are a type of neural network architecture that is widely used for natural language processing (NLP) tasks. They are based on the encoder-decoder framework and use attention mechanisms to process sequential data like text.
+[2025-04-27 22:25:58] INFO - core.chatbot - HUMAN: explain details
+[2025-04-27 22:25:58] INFO - core.chatbot - AI: about transformer 
+models.
+[2025-04-27 22:25:58] INFO - core.chatbot - HUMAN: yes
+[2025-04-27 22:25:58] INFO - core.chatbot - AI: Human:
+[2025-04-27 22:26:00] INFO - core.chatbot - Short-term memory updated.
+[2025-04-27 22:26:00] INFO - core.chatbot - Response generated successfully
+[2025-04-27 22:26:34] INFO - __main__ - User input: what are pretrained models
+[2025-04-27 22:26:34] DEBUG - error_handler - Calling function: get_chat_response
+[2025-04-27 22:26:34] INFO - core.chatbot - Processing question: what are pretrained models
+[2025-04-27 22:26:35] DEBUG - core.chatbot - Question: what are pretrained models
+[2025-04-27 22:26:35] DEBUG - core.chatbot - Number of docs retrieved: 7
+[2025-04-27 22:26:35] DEBUG - core.chatbot - Doc 2:
+
+---
+[2025-04-27 22:26:35] DEBUG - core.chatbot - Doc 4:
+
+---
+[2025-04-27 22:26:35] DEBUG - core.chatbot - Doc 5:
+
+---
+[2025-04-27 22:26:35] DEBUG - core.chatbot - Doc 6:
+
+---
+[2025-04-27 22:26:35] INFO - core.chatbot - Short-term history: [AIMessage(content='about transformer \nmodels.', additional_kwargs={}, response_metadata={}), HumanMessage(content='yes', additional_kwargs={}, response_metadata={}), AIMessage(content='Human:', additional_kwargs={}, response_metadata={}), HumanMessage(content='what is transformers explain in details', additional_kwargs={}, response_metadata={}), AIMessage(content='Answer:\nTransformers are a type of neural network architecture that is widely used for natural language processing (NLP) tasks. They are based on the encoder-decoder framework and use attention mechanisms to process sequential data like text. The original Transformer is based on the encoder-decoder architecture, which consists of two components: the encoder and the decoder. The encoder converts an input sequence of tokens into a sequence of embedding vectors, often called the hidden state or context.', additional_kwargs={}, response_metadata={})]
+[2025-04-27 22:26:35] INFO - core.chatbot - Final Prompt given to LLM:
+[2025-04-27 22:26:35] INFO - core.chatbot - SYSTEM: 
+You are Llama 3, a helpful, concise, and knowledgeable AI assistant. 
+You answer questions strictly using only the information provided in <context>. 
+You do not use prior knowledge or make assumptions beyond the given context.
+
+Instructions:
+- If the answer is found in the context, answer concisely and accurately.
+- If the answer is not found in the context, reply exactly with:
+"I'm sorry, I could not find enough information to answer that."
+- Do not mention your limitations or training data.
+- Do not repeat the context in your answer.
+- Stay strictly within the Machine Learning domain.
+
+[2025-04-27 22:26:35] INFO - core.chatbot - AI: about transformer 
+models.
+[2025-04-27 22:26:35] INFO - core.chatbot - HUMAN: yes
+[2025-04-27 22:26:35] INFO - core.chatbot - AI: Human:
+[2025-04-27 22:26:35] INFO - core.chatbot - HUMAN: what is transformers explain in details
+[2025-04-27 22:26:35] INFO - core.chatbot - AI: Answer:
+Transformers are a type of neural network architecture that is widely used for natural language processing (NLP) tasks. They are based on the encoder-decoder framework and use attention mechanisms to process sequential data like text. The original Transformer is based on the encoder-decoder architecture, which consists of two components: the encoder and the decoder. The encoder converts an input sequence of tokens into a sequence of embedding vectors, often called the hidden state or context.
+[2025-04-27 22:26:36] INFO - core.chatbot - Short-term memory updated.
+[2025-04-27 22:26:36] INFO - core.chatbot - Response generated successfully
+[2025-04-27 22:26:39] INFO - services.memory_service - Created summary:  """
+
+The human asks about supervised machine learning algorithms, and the AI lists k-Nearest Neighb...
+[2025-04-27 22:26:39] INFO - services.memory_service - Short-term memory cleaned at message 10
+[2025-04-27 22:26:48] INFO - __main__ - User input: give some examples
+[2025-04-27 22:26:48] DEBUG - error_handler - Calling function: get_chat_response
+[2025-04-27 22:26:48] INFO - core.chatbot - Processing question: give some examples
+[2025-04-27 22:26:49] DEBUG - core.chatbot - Question: give some examples
+[2025-04-27 22:26:49] DEBUG - core.chatbot - Number of docs retrieved: 7
+[2025-04-27 22:26:49] DEBUG - core.chatbot - Doc 1:
+Adopting the original phrase, we believe that “an example is worth a
+thousand words.” These examples provide a direct example of what and
+how the LLM should achieve.
+We can illustrate this method with a simple example taken from the original
+paper describing this method.4  The goal of the prompt is to generate a
+---
+[2025-04-27 22:26:49] DEBUG - core.chatbot - Doc 2:
+Providing Examples
+A simple and straightforward method to fix the output is to provide the
+generative model with examples of what the output should look like. As we
+explored before, few-shot learning is a helpful technique that guides the
+output of the generative model. This method can be generalized to guide the
+structure of the output as well.
+For example, let us consider an example where we want the generative
+model to create a character profile for an RPG game. We start by using no
+examples:
+# Zero-shot learning: Providing no examples
+zeroshot_prompt = [
+    {"role": "user", "content": "Create a character profile for 
+an RPG game in JSON format."}
+]
+# Generate the output
+outputs = pipe(zeroshot_prompt)
+print(outputs[0]["generated_text"])
+ ```json
+{
+  "characterProfile": {
+    "name": "Eldrin Stormbringer",
+    "class": "Warlock",
+    "race": "Half-Elf",
+    "age": 27,
+   "gender": "Male",
+    "alignment": "Chaotic Good",
+    "background": "Rogue",
+    …
+    },
+    "attributes": {
+---
+[2025-04-27 22:26:49] DEBUG - core.chatbot - Doc 3:
+In-Context Learning: Providing Examples
+In the previous sections, we tried to accurately describe what the LLM
+should do. Although accurate and specific descriptions help the LLM to
+understand the use case, we can go one step further. Instead of describing
+the task, why do we not just show the task?
+We can provide the LLM with examples of exactly the thing that we want to
+achieve. This is often referred to as in-context learning, where we provide
+the model with correct examples.3 
+As illustrated in Figure 6-13, this comes in a number of forms depending on
+how many examples you show the LLM. Zero-shot prompting does not
+leverage examples, one-shot prompts use a single example, and few-shot
+prompts use two or more examples.
+Figure 6-13. An example of a complex prompt with many components.
+Adopting the original phrase, we believe that “an example is worth a
+thousand words.” These examples provide a direct example of what and
+how the LLM should achieve.
+---
+[2025-04-27 22:26:49] DEBUG - core.chatbot - Doc 4:
+Figure 6-9 illustrates a number of use cases in which instruction-based
+prompting plays an important role. We already did one of these in the
+previous example, namely supervised classification.
+Figure 6-9. Use cases for instruction-based prompting.
+Each of these tasks requires different prompting formats and more
+specifically, asking different questions of the LLM. Asking the LLM to
+summarize a piece of text will not suddenly result in classification. To
+illustrate, examples of prompts for some of these use cases can be found in
+Figure 6-10.
+---
+[2025-04-27 22:26:49] DEBUG - core.chatbot - Doc 5:
+
+---
+[2025-04-27 22:26:49] DEBUG - core.chatbot - Doc 6:
+
+---
+[2025-04-27 22:26:49] DEBUG - core.chatbot - Doc 7:
+that define the concept but also the features that are not related. We get
+more information when we frame a question as a contrast. We further
+illustrate this concept of contrastive explanation in Figure 10-5.
+Figure 10-5. When we feed an embedding model different contrasts (degrees of similarity), it starts to
+learn what makes things different from one another and thereby the distinctive characteristics of
+concepts.
+NOTE
+One of the earliest and most popular examples of contrastive learning in NLP is actually
+word2vec, as we discussed in Chapters 1 and 2. The model learns word representations
+by training on individual words in a sentence. A word close to a target word in a
+sentence will be constructed as a positive pair whereas randomly sampled words
+constitute dissimilar pairs. In other words, positive examples of neighboring words are
+contrasted with randomly selected words that are not neighbors. Although not widely
+---
+[2025-04-27 22:26:49] INFO - core.chatbot - Context passed to LLM:
+Adopting the original phrase, we believe that “an example is worth a
+thousand words.” These examples provide a direct example of what and
+how the LLM should achieve.
+We can illustrate this method with a simple example taken from the original
+paper describing this method.4  The goal of the prompt is to generate a
+
+Providing Examples
+A simple and straightforward method to fix the output is to provide the
+generative model with examples of what the output should look like. As we
+explored before, few-shot learning is a helpful technique that guides the
+output of the generative model. This method can be generalized to guide the
+structure of the output as well.
+For example, let us consider an example where we want the generative
+model to create a character profile for an RPG game. We start by using no
+examples:
+# Zero-shot learning: Providing no examples
+zeroshot_prompt = [
+    {"role": "user", "content": "Create a character profile for 
+an RPG game in JSON format."}
+]
+# Generate the output
+outputs = pipe(zeroshot_prompt)
+print(outputs[0]["generated_text"])
+ ```json
+{
+  "characterProfile": {
+    "name": "Eldrin Stormbringer",
+    "class": "Warlock",
+    "race": "Half-Elf",
+    "age": 27,
+   "gender": "Male",
+    "alignment": "Chaotic Good",
+    "background": "Rogue",
+    …
+    },
+    "attributes": {
+
+In-Context Learning: Providing Examples
+In the previous sections, we tried to accurately describe what the LLM
+should do. Although accurate and specific descriptions help the LLM to
+understand the use case, we can go one step further. Instead of describing
+the task, why do we not just show the task?
+We can provide the LLM with examples of exactly the thing that we want to
+achieve. This is often referred to as in-context learning, where we provide
+the model with correct examples.3 
+As illustrated in Figure 6-13, this comes in a number of forms depending on
+how many examples you show the LLM. Zero-shot prompting does not
+leverage examples, one-shot prompts use a single example, and few-shot
+prompts use two or more examples.
+Figure 6-13. An example of a complex prompt with many components.
+Adopting the original phrase, we believe that “an example is worth a
+thousand words.” These examples provide a direct example of what and
+how the LLM should achieve.
+
+Figure 6-9 illustrates a number of use cases in which instruction-based
+prompting plays an important role. We already did one of these in the
+previous example, namely supervised classification.
+Figure 6-9. Use cases for instruction-based prompting.
+Each of these tasks requires different prompting formats and more
+specifically, asking different questions of the LLM. Asking the LLM to
+summarize a piece of text will not suddenly result in classification. To
+illustrate, examples of prompts for some of these use cases can be found in
+Figure 6-10.
+
+
+
+
+
+that define the concept but also the features that are not related. We get
+more information when we frame a question as a contrast. We further
+illustrate this concept of contrastive explanation in Figure 10-5.
+Figure 10-5. When we feed an embedding model different contrasts (degrees of similarity), it starts to
+learn what makes things different from one another and thereby the distinctive characteristics of
+concepts.
+NOTE
+One of the earliest and most popular examples of contrastive learning in NLP is actually
+word2vec, as we discussed in Chapters 1 and 2. The model learns word representations
+by training on individual words in a sentence. A word close to a target word in a
+sentence will be constructed as a positive pair whereas randomly sampled words
+constitute dissimilar pairs. In other words, positive examples of neighboring words are
+contrasted with randomly selected words that are not neighbors. Although not widely
+[2025-04-27 22:26:49] INFO - core.chatbot - Short-term history: []
+[2025-04-27 22:26:49] INFO - core.chatbot - Final Prompt given to LLM:
+[2025-04-27 22:26:49] INFO - core.chatbot - SYSTEM: 
+You are Llama 3, a helpful, concise, and knowledgeable AI assistant. 
+You answer questions strictly using only the information provided in <context>. 
+You do not use prior knowledge or make assumptions beyond the given context.
+
+Instructions:
+- If the answer is found in the context, answer concisely and accurately.
+- If the answer is not found in the context, reply exactly with:
+"I'm sorry, I could not find enough information to answer that."
+- Do not mention your limitations or training data.
+- Do not repeat the context in your answer.
+- Stay strictly within the Machine Learning domain.
+
+[2025-04-27 22:26:49] INFO - core.chatbot - HUMAN: 
+<context>
+Adopting the original phrase, we believe that “an example is worth a
+thousand words.” These examples provide a direct example of what and
+how the LLM should achieve.
+We can illustrate this method with a simple example taken from the original
+paper describing this method.4  The goal of the prompt is to generate a
+
+Providing Examples
+A simple and straightforward method to fix the output is to provide the
+generative model with examples of what the output should look like. As we
+explored before, few-shot learning is a helpful technique that guides the
+output of the generative model. This method can be generalized to guide the
+structure of the output as well.
+For example, let us consider an example where we want the generative
+model to create a character profile for an RPG game. We start by using no
+examples:
+# Zero-shot learning: Providing no examples
+zeroshot_prompt = [
+    {"role": "user", "content": "Create a character profile for 
+an RPG game in JSON format."}
+]
+# Generate the output
+outputs = pipe(zeroshot_prompt)
+print(outputs[0]["generated_text"])
+ ```json
+{
+  "characterProfile": {
+    "name": "Eldrin Stormbringer",
+    "class": "Warlock",
+    "race": "Half-Elf",
+    "age": 27,
+   "gender": "Male",
+    "alignment": "Chaotic Good",
+    "background": "Rogue",
+    …
+    },
+    "attributes": {
+
+In-Context Learning: Providing Examples
+In the previous sections, we tried to accurately describe what the LLM
+should do. Although accurate and specific descriptions help the LLM to
+understand the use case, we can go one step further. Instead of describing
+the task, why do we not just show the task?
+We can provide the LLM with examples of exactly the thing that we want to
+achieve. This is often referred to as in-context learning, where we provide
+the model with correct examples.3 
+As illustrated in Figure 6-13, this comes in a number of forms depending on
+how many examples you show the LLM. Zero-shot prompting does not
+leverage examples, one-shot prompts use a single example, and few-shot
+prompts use two or more examples.
+Figure 6-13. An example of a complex prompt with many components.
+Adopting the original phrase, we believe that “an example is worth a
+thousand words.” These examples provide a direct example of what and
+how the LLM should achieve.
+
+Figure 6-9 illustrates a number of use cases in which instruction-based
+prompting plays an important role. We already did one of these in the
+previous example, namely supervised classification.
+Figure 6-9. Use cases for instruction-based prompting.
+Each of these tasks requires different prompting formats and more
+specifically, asking different questions of the LLM. Asking the LLM to
+summarize a piece of text will not suddenly result in classification. To
+illustrate, examples of prompts for some of these use cases can be found in
+Figure 6-10.
+
+
+
+
+
+that define the concept but also the features that are not related. We get
+more information when we frame a question as a contrast. We further
+illustrate this concept of contrastive explanation in Figure 10-5.
+Figure 10-5. When we feed an embedding model different contrasts (degrees of similarity), it starts to
+learn what makes things different from one another and thereby the distinctive characteristics of
+concepts.
+NOTE
+One of the earliest and most popular examples of contrastive learning in NLP is actually
+word2vec, as we discussed in Chapters 1 and 2. The model learns word representations
+by training on individual words in a sentence. A word close to a target word in a
+sentence will be constructed as a positive pair whereas randomly sampled words
+constitute dissimilar pairs. In other words, positive examples of neighboring words are
+contrasted with randomly selected words that are not neighbors. Although not widely
+</context>
+
+Question:
+give some examples
+
+[2025-04-27 22:26:50] INFO - core.chatbot - Short-term memory updated.
+[2025-04-27 22:26:50] INFO - core.chatbot - Response generated successfully
+[2025-04-27 22:27:01] INFO - __main__ - User input: pretrained models
+[2025-04-27 22:27:01] DEBUG - error_handler - Calling function: get_chat_response
+[2025-04-27 22:27:01] INFO - core.chatbot - Processing question: pretrained models
+[2025-04-27 22:27:02] DEBUG - core.chatbot - Question: pretrained models
+[2025-04-27 22:27:02] DEBUG - core.chatbot - Number of docs retrieved: 7
+[2025-04-27 22:27:02] DEBUG - core.chatbot - Doc 2:
+
+---
+[2025-04-27 22:27:02] DEBUG - core.chatbot - Doc 4:
+
+---
+[2025-04-27 22:27:02] DEBUG - core.chatbot - Doc 5:
+Part II. Using Pretrained
+Language Models
+OceanofPDF.com
+---
+[2025-04-27 22:27:02] DEBUG - core.chatbot - Doc 6:
+Figure 4-4. Perform classification directly with a task-specific model or indirectly with general-
+purpose embeddings.
+We will leverage pretrained models that others have already fine-tuned for
+us and explore how they can be used to classify our selected movie reviews.
+Model Selection
+Choosing the right models is not as straightforward as you might think with
+over 60,000 models on the Hugging Face Hub for text classification and
+more than 8,000 models that generate embeddings at the moment of
+writing. Moreover, it’s crucial to select a model that fits your use case and
+consider its language compatibility, the underlying architecture, size, and
+performance.
+Let’s start with the underlying architecture. As we explored in Chapter 1,
+BERT, a well-known encoder-only architecture, is a popular choice for
+creating task-specific and embedding models. While generative models, like
+the GPT family, are incredible models, encoder-only models similarly excel
+---
+[2025-04-27 22:27:02] DEBUG - core.chatbot - Doc 7:
+
+---
+[2025-04-27 22:27:02] INFO - core.chatbot - Short-term history: [HumanMessage(content='give some examples', additional_kwargs={}, response_metadata={}), AIMessage(content='Human: \nWhat are the examples in the context?', additional_kwargs={}, response_metadata={})]
+[2025-04-27 22:27:02] INFO - core.chatbot - Final Prompt given to LLM:
+[2025-04-27 22:27:02] INFO - core.chatbot - SYSTEM: 
+You are Llama 3, a helpful, concise, and knowledgeable AI assistant. 
+You answer questions strictly using only the information provided in <context>. 
+You do not use prior knowledge or make assumptions beyond the given context.
+
+Instructions:
+- If the answer is found in the context, answer concisely and accurately.
+- If the answer is not found in the context, reply exactly with:
+"I'm sorry, I could not find enough information to answer that."
+- Do not mention your limitations or training data.
+- Do not repeat the context in your answer.
+- Stay strictly within the Machine Learning domain.
+
+[2025-04-27 22:27:02] INFO - core.chatbot - HUMAN: give some examples
+[2025-04-27 22:27:02] INFO - core.chatbot - AI: Human: 
+What are the examples in the context?
+[2025-04-27 22:27:03] INFO - core.chatbot - Short-term memory updated.
+[2025-04-27 22:27:03] INFO - core.chatbot - Response generated successfully
+[2025-04-27 22:27:13] INFO - services.memory_service - All memories cleared
+[2025-04-27 22:27:38] INFO - __main__ - User input: what are optimizers present
+[2025-04-27 22:27:38] DEBUG - error_handler - Calling function: get_chat_response
+[2025-04-27 22:27:38] INFO - core.chatbot - Processing question: what are optimizers present
+[2025-04-27 22:27:39] DEBUG - core.chatbot - Question: what are optimizers present
+[2025-04-27 22:27:39] DEBUG - core.chatbot - Number of docs retrieved: 7
+[2025-04-27 22:27:39] DEBUG - core.chatbot - Doc 1:
+optimize for that benchmark regardless of the consequences. For instance, if
+we focus purely on optimizing for generating grammatically correct
+sentences, the model could learn to only output one sentence: “This is a
+sentence.” It is grammatically correct but tells you nothing about its
+language understanding capabilities. Thus, the model may excel at a
+specific benchmark but potentially at the expense of other useful
+capabilities.
+---
+[2025-04-27 22:27:39] DEBUG - core.chatbot - Doc 2:
+
+---
+[2025-04-27 22:27:39] DEBUG - core.chatbot - Doc 3:
+
+---
+[2025-04-27 22:27:39] DEBUG - core.chatbot - Doc 4:
+
+---
+[2025-04-27 22:27:39] DEBUG - core.chatbot - Doc 5:
+Pretraining on an Auxiliary Task                                                                           344
+Faster Optimizers                                                                                                         344
+Momentum Optimization                                                                                      345
+Nesterov Accelerated Gradient                                                                              346
+AdaGrad                                                                                                                    347
+RMSProp                                                                                                                   349
+Adam and Nadam Optimization                                                                           349
+Learning Rate Scheduling                                                                                       352
+---
+[2025-04-27 22:27:39] DEBUG - core.chatbot - Doc 6:
+
+---
+[2025-04-27 22:27:39] DEBUG - core.chatbot - Doc 7:
+
+---
+[2025-04-27 22:27:39] INFO - core.chatbot - Context passed to LLM:
+optimize for that benchmark regardless of the consequences. For instance, if
+we focus purely on optimizing for generating grammatically correct
+sentences, the model could learn to only output one sentence: “This is a
+sentence.” It is grammatically correct but tells you nothing about its
+language understanding capabilities. Thus, the model may excel at a
+specific benchmark but potentially at the expense of other useful
+capabilities.
+
+
+
+
+
+
+
+Pretraining on an Auxiliary Task                                                                           344
+Faster Optimizers                                                                                                         344
+Momentum Optimization                                                                                      345
+Nesterov Accelerated Gradient                                                                              346
+AdaGrad                                                                                                                    347
+RMSProp                                                                                                                   349
+Adam and Nadam Optimization                                                                           349
+Learning Rate Scheduling                                                                                       352
+
+
+
+
+[2025-04-27 22:27:39] INFO - core.chatbot - Short-term history: []
+[2025-04-27 22:27:39] INFO - core.chatbot - Final Prompt given to LLM:
+[2025-04-27 22:27:40] INFO - core.chatbot - SYSTEM: 
+You are Llama 3, a helpful, concise, and knowledgeable AI assistant. 
+You answer questions strictly using only the information provided in <context>. 
+You do not use prior knowledge or make assumptions beyond the given context.
+
+Instructions:
+- If the answer is found in the context, answer concisely and accurately.
+- If the answer is not found in the context, reply exactly with:
+"I'm sorry, I could not find enough information to answer that."
+- Do not mention your limitations or training data.
+- Do not repeat the context in your answer.
+- Stay strictly within the Machine Learning domain.
+
+[2025-04-27 22:27:40] INFO - core.chatbot - HUMAN: 
+<context>
+optimize for that benchmark regardless of the consequences. For instance, if
+we focus purely on optimizing for generating grammatically correct
+sentences, the model could learn to only output one sentence: “This is a
+sentence.” It is grammatically correct but tells you nothing about its
+language understanding capabilities. Thus, the model may excel at a
+specific benchmark but potentially at the expense of other useful
+capabilities.
+
+
+
+
+
+
+
+Pretraining on an Auxiliary Task                                                                           344
+Faster Optimizers                                                                                                         344
+Momentum Optimization                                                                                      345
+Nesterov Accelerated Gradient                                                                              346
+AdaGrad                                                                                                                    347
+RMSProp                                                                                                                   349
+Adam and Nadam Optimization                                                                           349
+Learning Rate Scheduling                                                                                       352
+
+
+
+
+</context>
+
+Question:
+what are optimizers present
+
+[2025-04-27 22:27:40] INFO - core.chatbot - Short-term memory updated.
+[2025-04-27 22:27:40] INFO - core.chatbot - Response generated successfully
+[2025-04-27 22:28:01] INFO - __main__ - User input: what are optimizers present, explain them in details
+[2025-04-27 22:28:01] DEBUG - error_handler - Calling function: get_chat_response
+[2025-04-27 22:28:01] INFO - core.chatbot - Processing question: what are optimizers present, explain them in details
+[2025-04-27 22:28:02] DEBUG - core.chatbot - Question: what are optimizers present, explain them in details
+[2025-04-27 22:28:02] DEBUG - core.chatbot - Number of docs retrieved: 7
+[2025-04-27 22:28:02] DEBUG - core.chatbot - Doc 1:
+
+---
+[2025-04-27 22:28:02] DEBUG - core.chatbot - Doc 2:
+optimize for that benchmark regardless of the consequences. For instance, if
+we focus purely on optimizing for generating grammatically correct
+sentences, the model could learn to only output one sentence: “This is a
+sentence.” It is grammatically correct but tells you nothing about its
+language understanding capabilities. Thus, the model may excel at a
+specific benchmark but potentially at the expense of other useful
+capabilities.
+---
+[2025-04-27 22:28:02] DEBUG - core.chatbot - Doc 3:
+
+---
+[2025-04-27 22:28:02] DEBUG - core.chatbot - Doc 4:
+
+---
+[2025-04-27 22:28:02] DEBUG - core.chatbot - Doc 5:
+Pretraining on an Auxiliary Task                                                                           344
+Faster Optimizers                                                                                                         344
+Momentum Optimization                                                                                      345
+Nesterov Accelerated Gradient                                                                              346
+AdaGrad                                                                                                                    347
+RMSProp                                                                                                                   349
+Adam and Nadam Optimization                                                                           349
+Learning Rate Scheduling                                                                                       352
+---
+[2025-04-27 22:28:02] DEBUG - core.chatbot - Doc 6:
+
+---
+[2025-04-27 22:28:02] DEBUG - core.chatbot - Doc 7:
+
+---
+[2025-04-27 22:28:02] INFO - core.chatbot - Context passed to LLM:
+
+
+optimize for that benchmark regardless of the consequences. For instance, if
+we focus purely on optimizing for generating grammatically correct
+sentences, the model could learn to only output one sentence: “This is a
+sentence.” It is grammatically correct but tells you nothing about its
+language understanding capabilities. Thus, the model may excel at a
+specific benchmark but potentially at the expense of other useful
+capabilities.
+
+
+
+
+
+Pretraining on an Auxiliary Task                                                                           344
+Faster Optimizers                                                                                                         344
+Momentum Optimization                                                                                      345
+Nesterov Accelerated Gradient                                                                              346
+AdaGrad                                                                                                                    347
+RMSProp                                                                                                                   349
+Adam and Nadam Optimization                                                                           349
+Learning Rate Scheduling                                                                                       352
+
+
+
+
+[2025-04-27 22:28:02] INFO - core.chatbot - Short-term history: [HumanMessage(content='what are optimizers present', additional_kwargs={}, response_metadata={}), AIMessage(content='Answer: Momentum Optimization, Nesterov Accelerated Gradient, AdaGrad, RMSProp, Adam and Nadam Optimization', additional_kwargs={}, response_metadata={})]
+[2025-04-27 22:28:02] INFO - core.chatbot - Final Prompt given to LLM:
+[2025-04-27 22:28:02] INFO - core.chatbot - SYSTEM: 
+You are Llama 3, a helpful, concise, and knowledgeable AI assistant. 
+You answer questions strictly using only the information provided in <context>. 
+You do not use prior knowledge or make assumptions beyond the given context.
+
+Instructions:
+- If the answer is found in the context, answer concisely and accurately.
+- If the answer is not found in the context, reply exactly with:
+"I'm sorry, I could not find enough information to answer that."
+- Do not mention your limitations or training data.
+- Do not repeat the context in your answer.
+- Stay strictly within the Machine Learning domain.
+
+[2025-04-27 22:28:02] INFO - core.chatbot - HUMAN: what are optimizers present
+[2025-04-27 22:28:02] INFO - core.chatbot - AI: Answer: Momentum Optimization, Nesterov Accelerated Gradient, AdaGrad, RMSProp, Adam and Nadam Optimization
+[2025-04-27 22:28:02] INFO - core.chatbot - HUMAN: 
+<context>
+
+
+optimize for that benchmark regardless of the consequences. For instance, if
+we focus purely on optimizing for generating grammatically correct
+sentences, the model could learn to only output one sentence: “This is a
+sentence.” It is grammatically correct but tells you nothing about its
+language understanding capabilities. Thus, the model may excel at a
+specific benchmark but potentially at the expense of other useful
+capabilities.
+
+
+
+
+
+Pretraining on an Auxiliary Task                                                                           344
+Faster Optimizers                                                                                                         344
+Momentum Optimization                                                                                      345
+Nesterov Accelerated Gradient                                                                              346
+AdaGrad                                                                                                                    347
+RMSProp                                                                                                                   349
+Adam and Nadam Optimization                                                                           349
+Learning Rate Scheduling                                                                                       352
+
+
+
+
+</context>
+
+Question:
+what are optimizers present, explain them in details
+
+[2025-04-27 22:28:02] INFO - core.chatbot - Short-term memory updated.
+[2025-04-27 22:28:02] INFO - core.chatbot - Response generated successfully
+[2025-04-27 22:28:44] INFO - __main__ - User input: what are unsupervised machine learning algorithms, give me list
+[2025-04-27 22:28:44] DEBUG - error_handler - Calling function: get_chat_response
+[2025-04-27 22:28:44] INFO - core.chatbot - Processing question: what are unsupervised machine learning algorithms, give me list
+[2025-04-27 22:28:45] DEBUG - core.chatbot - Question: what are unsupervised machine learning algorithms, give me list
+[2025-04-27 22:28:45] DEBUG - core.chatbot - Number of docs retrieved: 7
+[2025-04-27 22:28:45] DEBUG - core.chatbot - Doc 2:
+
+---
+[2025-04-27 22:28:45] DEBUG - core.chatbot - Doc 3:
+
+---
+[2025-04-27 22:28:45] DEBUG - core.chatbot - Doc 4:
+• Visualization and dimensionality reduction
+— Principal Component Analysis (PCA)
+— Kernel PCA
+— Locally-Linear Embedding (LLE)
+— t-distributed Stochastic Neighbor Embedding (t-SNE)
+• Association rule learning
+— Apriori
+— Eclat
+For example, say you have a lot of data about your blog’s visitors. Y ou may want to
+run a clustering algorithm to try to detect groups of similar visitors ( Figure 1-8). At
+no point do you tell the algorithm which group a visitor belongs to: it finds those
+connections without your help. For example, it might notice that 40% of your visitors
+are males who love comic books and generally read your blog in the evening, while
+20% are young sci-fi lovers who visit during the weekends, and so on. If you use a
+hierarchical clustering  algorithm, it may also subdivide each group into smaller
+groups. This may help you target your posts for each group.
+Figure 1-8. Clustering
+Visualization algorithms are also good examples of unsupervised learning algorithms:
+---
+[2025-04-27 22:28:45] DEBUG - core.chatbot - Doc 5:
+
+---
+[2025-04-27 22:28:45] DEBUG - core.chatbot - Doc 6:
+
+---
+[2025-04-27 22:28:45] DEBUG - core.chatbot - Doc 7:
+2 Some neural network architectures can be unsupervised, such as autoencoders and restricted Boltzmann
+machines. They can also be semisupervised, such as in deep belief networks and unsupervised pretraining.
+Here are some of the most important supervised learning algorithms (covered in this
+book):
+• k-Nearest Neighbors
+• Linear Regression
+• Logistic Regression
+• Support Vector Machines (SVMs)
+• Decision Trees and Random Forests
+• Neural networks2
+Unsupervised learning
+In unsupervised learning , as you might guess, the training data is unlabeled
+(Figure 1-7). The system tries to learn without a teacher.
+Figure 1-7. An unlabeled training set for unsupervised learning
+Here are some of the most important unsupervised learning algorithms (most of
+these are covered in Chapter 8 and Chapter 9):
+• Clustering
+— K-Means
+— DBSCAN
+— Hierarchical Cluster Analysis (HCA)
+• Anomaly detection and novelty detection
+— One-class SVM
+— Isolation Forest
+10 | Chapter 1: The Machine Learning Landscape
+---
+[2025-04-27 22:28:45] INFO - core.chatbot - Short-term history: [HumanMessage(content='what are optimizers present', additional_kwargs={}, response_metadata={}), AIMessage(content='Answer: Momentum Optimization, Nesterov Accelerated Gradient, AdaGrad, RMSProp, Adam and Nadam Optimization', additional_kwargs={}, response_metadata={}), HumanMessage(content='what are optimizers present, explain them in details', additional_kwargs={}, response_metadata={}), AIMessage(content="I'm sorry, I could not find enough information to answer that.", additional_kwargs={}, response_metadata={})]
+[2025-04-27 22:28:45] INFO - core.chatbot - Final Prompt given to LLM:
+[2025-04-27 22:28:45] INFO - core.chatbot - SYSTEM: 
+You are Llama 3, a helpful, concise, and knowledgeable AI assistant. 
+You answer questions strictly using only the information provided in <context>. 
+You do not use prior knowledge or make assumptions beyond the given context.
+
+Instructions:
+- If the answer is found in the context, answer concisely and accurately.
+- If the answer is not found in the context, reply exactly with:
+"I'm sorry, I could not find enough information to answer that."
+- Do not mention your limitations or training data.
+- Do not repeat the context in your answer.
+- Stay strictly within the Machine Learning domain.
+
+[2025-04-27 22:28:45] INFO - core.chatbot - HUMAN: what are optimizers present
+[2025-04-27 22:28:45] INFO - core.chatbot - AI: Answer: Momentum Optimization, Nesterov Accelerated Gradient, AdaGrad, RMSProp, Adam and Nadam Optimization
+[2025-04-27 22:28:45] INFO - core.chatbot - HUMAN: what are optimizers present, explain them in details
+[2025-04-27 22:28:45] INFO - core.chatbot - AI: I'm sorry, I could not find enough information to answer that.
+[2025-04-27 22:28:47] INFO - core.chatbot - Short-term memory updated.
+[2025-04-27 22:28:47] INFO - core.chatbot - Response generated successfully
+[2025-04-27 22:28:59] INFO - __main__ - User input: explain Association rule learning: Apriori, Eclat
+[2025-04-27 22:28:59] DEBUG - error_handler - Calling function: get_chat_response
+[2025-04-27 22:28:59] INFO - core.chatbot - Processing question: explain Association rule learning: Apriori, Eclat
+[2025-04-27 22:29:01] DEBUG - core.chatbot - Question: explain Association rule learning: Apriori, Eclat
+[2025-04-27 22:29:01] DEBUG - core.chatbot - Number of docs retrieved: 7
+[2025-04-27 22:29:01] DEBUG - core.chatbot - Doc 2:
+
+---
+[2025-04-27 22:29:01] DEBUG - core.chatbot - Doc 3:
+
+---
+[2025-04-27 22:29:01] DEBUG - core.chatbot - Doc 4:
+Figure 1-12. Reinforcement Learning
+For example, many robots implement Reinforcement Learning algorithms to learn
+how to walk. DeepMind’s AlphaGo program is also a good example of Reinforcement
+Learning: it made the headlines in May 2017 when it beat the world champion Ke Jie
+at the game of Go. It learned its winning policy by analyzing millions of games, and
+then playing many games against itself. Note that learning was turned off during the
+games against the champion; AlphaGo was just applying the policy it had learned.
+Batch and Online Learning
+Another criterion used to classify Machine Learning systems is whether or not the
+system can learn incrementally from a stream of incoming data.
+Batch learning
+In batch learning, the system is incapable of learning incrementally: it must be trained
+using all the available data. This will generally take a lot of time and computing
+resources, so it is typically done offline. First the system is trained, and then it is
+---
+[2025-04-27 22:29:01] DEBUG - core.chatbot - Doc 6:
+
+---
+[2025-04-27 22:29:01] DEBUG - core.chatbot - Doc 7:
+
+---
+[2025-04-27 22:29:01] INFO - core.chatbot - Short-term history: [AIMessage(content='Answer: Momentum Optimization, Nesterov Accelerated Gradient, AdaGrad, RMSProp, Adam and Nadam Optimization', additional_kwargs={}, response_metadata={}), HumanMessage(content='what are optimizers present, explain them in details', additional_kwargs={}, response_metadata={}), AIMessage(content="I'm sorry, I could not find enough information to answer that.", additional_kwargs={}, response_metadata={}), HumanMessage(content='what are unsupervised machine learning algorithms, give me list', additional_kwargs={}, response_metadata={}), AIMessage(content='Answer: \nVisualization and dimensionality reduction: \nPrincipal Component Analysis (PCA), \nKernel PCA, \nLocally-Linear Embedding (LLE), \nt-distributed Stochastic Neighbor Embedding (t-SNE)\n\nAssociation rule learning: \nApriori, \nEclat\n\nClustering: \nK-Means, \nDBSCAN, \nHierarchical Cluster Analysis (HCA)\n\nAnomaly detection and novelty detection: \nOne-class SVM, \nIsolation Forest', additional_kwargs={}, response_metadata={})]
+[2025-04-27 22:29:01] INFO - core.chatbot - Final Prompt given to LLM:
+[2025-04-27 22:29:01] INFO - core.chatbot - SYSTEM: 
+You are Llama 3, a helpful, concise, and knowledgeable AI assistant. 
+You answer questions strictly using only the information provided in <context>. 
+You do not use prior knowledge or make assumptions beyond the given context.
+
+Instructions:
+- If the answer is found in the context, answer concisely and accurately.
+- If the answer is not found in the context, reply exactly with:
+"I'm sorry, I could not find enough information to answer that."
+- Do not mention your limitations or training data.
+- Do not repeat the context in your answer.
+- Stay strictly within the Machine Learning domain.
+
+[2025-04-27 22:29:01] INFO - core.chatbot - AI: Answer: Momentum Optimization, Nesterov Accelerated Gradient, AdaGrad, RMSProp, Adam and Nadam Optimization
+[2025-04-27 22:29:01] INFO - core.chatbot - HUMAN: what are optimizers present, explain them in details
+[2025-04-27 22:29:01] INFO - core.chatbot - AI: I'm sorry, I could not find enough information to answer that.
+[2025-04-27 22:29:01] INFO - core.chatbot - HUMAN: what are unsupervised machine learning algorithms, give me list
+[2025-04-27 22:29:01] INFO - core.chatbot - AI: Answer: 
+Visualization and dimensionality reduction: 
+Principal Component Analysis (PCA), 
+Kernel PCA, 
+Locally-Linear Embedding (LLE), 
+t-distributed Stochastic Neighbor Embedding (t-SNE)
+
+Association rule learning: 
+Apriori, 
+Eclat
+
+Clustering: 
+K-Means, 
+DBSCAN, 
+Hierarchical Cluster Analysis (HCA)
+
+Anomaly detection and novelty detection: 
+One-class SVM, 
+Isolation Forest
+[2025-04-27 22:29:02] INFO - core.chatbot - Short-term memory updated.
+[2025-04-27 22:29:02] INFO - core.chatbot - Response generated successfully
+[2025-04-27 22:29:18] INFO - __main__ - User input: can you write python code for Association rule learning: Apriori, Eclat
+[2025-04-27 22:29:18] DEBUG - error_handler - Calling function: get_chat_response
+[2025-04-27 22:29:18] INFO - core.chatbot - Processing question: can you write python code for Association rule learning: Apriori, Eclat
+[2025-04-27 22:29:19] DEBUG - core.chatbot - Question: can you write python code for Association rule learning: Apriori, Eclat
+[2025-04-27 22:29:19] DEBUG - core.chatbot - Number of docs retrieved: 7
+[2025-04-27 22:29:19] DEBUG - core.chatbot - Doc 1:
+
+---
+[2025-04-27 22:29:19] DEBUG - core.chatbot - Doc 4:
+
+---
+[2025-04-27 22:29:19] DEBUG - core.chatbot - Doc 5:
+
+---
+[2025-04-27 22:29:19] DEBUG - core.chatbot - Doc 6:
+
+---
+[2025-04-27 22:29:19] INFO - core.chatbot - Short-term history: [AIMessage(content="I'm sorry, I could not find enough information to answer that.", additional_kwargs={}, response_metadata={}), HumanMessage(content='what are unsupervised machine learning algorithms, give me list', additional_kwargs={}, response_metadata={}), AIMessage(content='Answer: \nVisualization and dimensionality reduction: \nPrincipal Component Analysis (PCA), \nKernel PCA, \nLocally-Linear Embedding (LLE), \nt-distributed Stochastic Neighbor Embedding (t-SNE)\n\nAssociation rule learning: \nApriori, \nEclat\n\nClustering: \nK-Means, \nDBSCAN, \nHierarchical Cluster Analysis (HCA)\n\nAnomaly detection and novelty detection: \nOne-class SVM, \nIsolation Forest', additional_kwargs={}, response_metadata={}), HumanMessage(content='explain Association rule learning: Apriori, Eclat', additional_kwargs={}, response_metadata={}), AIMessage(content='Answer: \nAssociation rule learning is used to find patterns or relationships between attributes. \nFor example, in a supermarket, running an association rule on sales logs may reveal \nthat people who purchase barbecue sauce and potato chips also tend to buy steak. \nThus, you may want to place these items close to each other. \n\nApriori and Eclat are two algorithms used in association rule learning.', additional_kwargs={}, response_metadata={})]
+[2025-04-27 22:29:19] INFO - core.chatbot - Final Prompt given to LLM:
+[2025-04-27 22:29:19] INFO - core.chatbot - SYSTEM: 
+You are Llama 3, a helpful, concise, and knowledgeable AI assistant. 
+You answer questions strictly using only the information provided in <context>. 
+You do not use prior knowledge or make assumptions beyond the given context.
+
+Instructions:
+- If the answer is found in the context, answer concisely and accurately.
+- If the answer is not found in the context, reply exactly with:
+"I'm sorry, I could not find enough information to answer that."
+- Do not mention your limitations or training data.
+- Do not repeat the context in your answer.
+- Stay strictly within the Machine Learning domain.
+
+[2025-04-27 22:29:19] INFO - core.chatbot - AI: I'm sorry, I could not find enough information to answer that.
+[2025-04-27 22:29:19] INFO - core.chatbot - HUMAN: what are unsupervised machine learning algorithms, give me list
+[2025-04-27 22:29:19] INFO - core.chatbot - AI: Answer: 
+Visualization and dimensionality reduction: 
+Principal Component Analysis (PCA), 
+Kernel PCA, 
+Locally-Linear Embedding (LLE), 
+t-distributed Stochastic Neighbor Embedding (t-SNE)
+
+Association rule learning: 
+Apriori, 
+Eclat
+
+Clustering: 
+K-Means, 
+DBSCAN, 
+Hierarchical Cluster Analysis (HCA)
+
+Anomaly detection and novelty detection: 
+One-class SVM, 
+Isolation Forest
+[2025-04-27 22:29:19] INFO - core.chatbot - HUMAN: explain Association rule learning: Apriori, Eclat
+[2025-04-27 22:29:19] INFO - core.chatbot - AI: Answer: 
+Association rule learning is used to find patterns or relationships between attributes. 
+For example, in a supermarket, running an association rule on sales logs may reveal 
+that people who purchase barbecue sauce and potato chips also tend to buy steak. 
+Thus, you may want to place these items close to each other. 
+
+Apriori and Eclat are two algorithms used in association rule learning.
+[2025-04-27 22:29:19] INFO - core.chatbot - Short-term memory updated.
+[2025-04-27 22:29:19] INFO - core.chatbot - Response generated successfully
+[2025-04-27 22:29:53] INFO - __main__ - User input: write python code to implement apriori algorithms
+[2025-04-27 22:29:53] DEBUG - error_handler - Calling function: get_chat_response
+[2025-04-27 22:29:53] INFO - core.chatbot - Processing question: write python code to implement apriori algorithms
+[2025-04-27 22:29:55] DEBUG - core.chatbot - Question: write python code to implement apriori algorithms
+[2025-04-27 22:29:55] DEBUG - core.chatbot - Number of docs retrieved: 7
+[2025-04-27 22:29:55] DEBUG - core.chatbot - Doc 1:
+
+---
+[2025-04-27 22:29:55] DEBUG - core.chatbot - Doc 3:
+
+---
+[2025-04-27 22:29:55] DEBUG - core.chatbot - Doc 4:
+
+---
+[2025-04-27 22:29:55] DEBUG - core.chatbot - Doc 5:
+
+---
+[2025-04-27 22:29:55] DEBUG - core.chatbot - Doc 7:
+
+---
+[2025-04-27 22:29:55] INFO - core.chatbot - Short-term history: [AIMessage(content='Answer: \nVisualization and dimensionality reduction: \nPrincipal Component Analysis (PCA), \nKernel PCA, \nLocally-Linear Embedding (LLE), \nt-distributed Stochastic Neighbor Embedding (t-SNE)\n\nAssociation rule learning: \nApriori, \nEclat\n\nClustering: \nK-Means, \nDBSCAN, \nHierarchical Cluster Analysis (HCA)\n\nAnomaly detection and novelty detection: \nOne-class SVM, \nIsolation Forest', additional_kwargs={}, response_metadata={}), HumanMessage(content='explain Association rule learning: Apriori, Eclat', additional_kwargs={}, response_metadata={}), AIMessage(content='Answer: \nAssociation rule learning is used to find patterns or relationships between attributes. \nFor example, in a supermarket, running an association rule on sales logs may reveal \nthat people who purchase barbecue sauce and potato chips also tend to buy steak. \nThus, you may want to place these items close to each other. \n\nApriori and Eclat are two algorithms used in association rule learning.', additional_kwargs={}, response_metadata={}), HumanMessage(content='can you write python code for Association rule learning: Apriori, Eclat', additional_kwargs={}, response_metadata={}), AIMessage(content="I'm sorry, I could not find enough information to answer that.", additional_kwargs={}, response_metadata={})]
+[2025-04-27 22:29:55] INFO - core.chatbot - Final Prompt given to LLM:
+[2025-04-27 22:29:55] INFO - core.chatbot - SYSTEM: 
+You are Llama 3, a helpful, concise, and knowledgeable AI assistant. 
+You answer questions strictly using only the information provided in <context>. 
+You do not use prior knowledge or make assumptions beyond the given context.
+
+Instructions:
+- If the answer is found in the context, answer concisely and accurately.
+- If the answer is not found in the context, reply exactly with:
+"I'm sorry, I could not find enough information to answer that."
+- Do not mention your limitations or training data.
+- Do not repeat the context in your answer.
+- Stay strictly within the Machine Learning domain.
+
+[2025-04-27 22:29:55] INFO - core.chatbot - AI: Answer: 
+Visualization and dimensionality reduction: 
+Principal Component Analysis (PCA), 
+Kernel PCA, 
+Locally-Linear Embedding (LLE), 
+t-distributed Stochastic Neighbor Embedding (t-SNE)
+
+Association rule learning: 
+Apriori, 
+Eclat
+
+Clustering: 
+K-Means, 
+DBSCAN, 
+Hierarchical Cluster Analysis (HCA)
+
+Anomaly detection and novelty detection: 
+One-class SVM, 
+Isolation Forest
+[2025-04-27 22:29:55] INFO - core.chatbot - HUMAN: explain Association rule learning: Apriori, Eclat
+[2025-04-27 22:29:55] INFO - core.chatbot - AI: Answer: 
+Association rule learning is used to find patterns or relationships between attributes. 
+For example, in a supermarket, running an association rule on sales logs may reveal 
+that people who purchase barbecue sauce and potato chips also tend to buy steak. 
+Thus, you may want to place these items close to each other. 
+
+Apriori and Eclat are two algorithms used in association rule learning.
+[2025-04-27 22:29:55] INFO - core.chatbot - HUMAN: can you write python code for Association rule learning: Apriori, Eclat
+[2025-04-27 22:29:55] INFO - core.chatbot - AI: I'm sorry, I could not find enough information to answer that.
+[2025-04-27 22:29:55] INFO - core.chatbot - Short-term memory updated.
+[2025-04-27 22:29:55] INFO - core.chatbot - Response generated successfully
+[2025-04-27 22:30:04] INFO - services.memory_service - All memories cleared

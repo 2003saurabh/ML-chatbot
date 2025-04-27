@@ -1,0 +1,6 @@
+streamlit
+langchain
+langchain_aws
+qdrant-client
+boto3
+python-dotenv

@@ -1,0 +1,68 @@
+2025-04-26 10:20:51,487 | INFO | vectorstore_utils | [Qdrant] Init attempt 1
+2025-04-26 10:20:54,983 | INFO | vectorstore_utils | Qdrant client initialized successfully
+2025-04-26 10:20:54,984 | INFO | vectorstore_utils | Initializing Bedrock client...
+2025-04-26 10:21:09,974 | INFO | __main__ | Local file saved: 57401d6e-f74c-46b8-96e4-9ded798f8dc2.pdf (Original: Aurelien-Geron-Hands-On-Machine-Learning-with-Scikit-Learn-Keras-and-Tensorflow_-Concepts-Tools-and-Techniques-to-Build-Intelligent-Systems-OReilly-Media-2019.pdf)
+2025-04-26 10:21:09,976 | INFO | upload_utils | Uploading 57401d6e-f74c-46b8-96e4-9ded798f8dc2.pdf to s3://qdrant-rag-vectors/uploads/57401d6e-f74c-46b8-96e4-9ded798f8dc2.pdf
+2025-04-26 10:21:19,340 | INFO | upload_utils | Upload successful.
+2025-04-26 10:21:19,354 | INFO | __main__ | Uploaded to S3 - Bucket: qdrant-rag-vectors, Key: uploads/57401d6e-f74c-46b8-96e4-9ded798f8dc2.pdf
+2025-04-26 10:21:19,355 | INFO | embedding_utils | Loading PDF file: 57401d6e-f74c-46b8-96e4-9ded798f8dc2.pdf
+2025-04-26 10:21:31,021 | INFO | embedding_utils | Extracted 1341 chunks from 57401d6e-f74c-46b8-96e4-9ded798f8dc2.pdf
+2025-04-26 10:21:31,023 | INFO | __main__ | Extracted 1341 text chunks from 57401d6e-f74c-46b8-96e4-9ded798f8dc2.pdf
+2025-04-26 10:21:31,024 | INFO | embedding_utils | Generating embeddings for 1341 chunks...
+2025-04-26 10:23:30,935 | INFO | embedding_utils | Generated 1341 embeddings
+2025-04-26 10:23:30,937 | INFO | __main__ | Generated 1341 embeddings for file: 57401d6e-f74c-46b8-96e4-9ded798f8dc2.pdf
+2025-04-26 10:23:30,965 | WARNING | vectorstore_utils | Removed invalid Unicode surrogates from chunk 177
+2025-04-26 10:23:31,003 | WARNING | vectorstore_utils | Removed invalid Unicode surrogates from chunk 366
+2025-04-26 10:23:31,058 | WARNING | vectorstore_utils | Removed invalid Unicode surrogates from chunk 658
+2025-04-26 10:23:31,066 | WARNING | vectorstore_utils | Removed invalid Unicode surrogates from chunk 704
+2025-04-26 10:23:31,067 | WARNING | vectorstore_utils | Removed invalid Unicode surrogates from chunk 706
+2025-04-26 10:23:31,071 | WARNING | vectorstore_utils | Removed invalid Unicode surrogates from chunk 727
+2025-04-26 10:23:31,072 | WARNING | vectorstore_utils | Removed invalid Unicode surrogates from chunk 734
+2025-04-26 10:23:31,073 | WARNING | vectorstore_utils | Removed invalid Unicode surrogates from chunk 735
+2025-04-26 10:23:31,105 | WARNING | vectorstore_utils | Removed invalid Unicode surrogates from chunk 907
+2025-04-26 10:23:31,106 | WARNING | vectorstore_utils | Removed invalid Unicode surrogates from chunk 908
+2025-04-26 10:23:31,109 | WARNING | vectorstore_utils | Removed invalid Unicode surrogates from chunk 923
+2025-04-26 10:23:31,116 | WARNING | vectorstore_utils | Removed invalid Unicode surrogates from chunk 954
+2025-04-26 10:23:31,117 | WARNING | vectorstore_utils | Removed invalid Unicode surrogates from chunk 955
+2025-04-26 10:23:31,117 | WARNING | vectorstore_utils | Removed invalid Unicode surrogates from chunk 956
+2025-04-26 10:23:31,118 | WARNING | vectorstore_utils | Removed invalid Unicode surrogates from chunk 959
+2025-04-26 10:23:31,119 | WARNING | vectorstore_utils | Removed invalid Unicode surrogates from chunk 961
+2025-04-26 10:23:31,120 | WARNING | vectorstore_utils | Removed invalid Unicode surrogates from chunk 964
+2025-04-26 10:23:31,121 | WARNING | vectorstore_utils | Removed invalid Unicode surrogates from chunk 965
+2025-04-26 10:23:32,095 | INFO | vectorstore_utils | Leaving existing collection 'machine-learning-book' intact (append mode)
+2025-04-26 10:23:54,074 | INFO | vectorstore_utils | Uploaded 1341 embeddings to 'machine-learning-book'
+2025-04-26 10:23:54,093 | INFO | __main__ | Appended 1341 embeddings to Qdrant collection `machine-learning-book`.
+2025-04-26 10:23:54,348 | INFO | __main__ | Total vectors in `machine-learning-book`: 2842
+2025-04-26 10:23:54,356 | INFO | __main__ | Local file cleaned up: 57401d6e-f74c-46b8-96e4-9ded798f8dc2.pdf
+2025-04-26 10:24:28,226 | INFO | __main__ | Local file saved: 668642be-01a5-4148-8928-9c3c3aa44b24.pdf (Original: natural-language-processing-with-transformers-revised-edition-1098136799-9781098136796-9781098103248_compress.pdf)
+2025-04-26 10:24:28,226 | INFO | upload_utils | Uploading 668642be-01a5-4148-8928-9c3c3aa44b24.pdf to s3://qdrant-rag-vectors/uploads/668642be-01a5-4148-8928-9c3c3aa44b24.pdf
+2025-04-26 10:24:36,087 | INFO | upload_utils | Upload successful.
+2025-04-26 10:24:36,089 | INFO | __main__ | Uploaded to S3 - Bucket: qdrant-rag-vectors, Key: uploads/668642be-01a5-4148-8928-9c3c3aa44b24.pdf
+2025-04-26 10:24:36,099 | INFO | embedding_utils | Loading PDF file: 668642be-01a5-4148-8928-9c3c3aa44b24.pdf
+2025-04-26 10:24:47,476 | INFO | embedding_utils | Extracted 1072 chunks from 668642be-01a5-4148-8928-9c3c3aa44b24.pdf
+2025-04-26 10:24:47,478 | INFO | __main__ | Extracted 1072 text chunks from 668642be-01a5-4148-8928-9c3c3aa44b24.pdf
+2025-04-26 10:24:47,478 | INFO | embedding_utils | Generating embeddings for 1072 chunks...
+2025-04-26 10:26:34,075 | INFO | embedding_utils | Generated 1072 embeddings
+2025-04-26 10:26:34,077 | INFO | __main__ | Generated 1072 embeddings for file: 668642be-01a5-4148-8928-9c3c3aa44b24.pdf
+2025-04-26 10:26:34,144 | WARNING | vectorstore_utils | Removed invalid Unicode surrogates from chunk 398
+2025-04-26 10:26:34,146 | WARNING | vectorstore_utils | Removed invalid Unicode surrogates from chunk 400
+2025-04-26 10:26:34,147 | WARNING | vectorstore_utils | Removed invalid Unicode surrogates from chunk 401
+2025-04-26 10:26:34,150 | WARNING | vectorstore_utils | Removed invalid Unicode surrogates from chunk 412
+2025-04-26 10:26:34,151 | WARNING | vectorstore_utils | Removed invalid Unicode surrogates from chunk 413
+2025-04-26 10:26:34,153 | WARNING | vectorstore_utils | Removed invalid Unicode surrogates from chunk 422
+2025-04-26 10:26:34,155 | WARNING | vectorstore_utils | Removed invalid Unicode surrogates from chunk 423
+2025-04-26 10:26:34,202 | WARNING | vectorstore_utils | Removed invalid Unicode surrogates from chunk 642
+2025-04-26 10:26:34,212 | WARNING | vectorstore_utils | Removed invalid Unicode surrogates from chunk 707
+2025-04-26 10:26:34,212 | WARNING | vectorstore_utils | Removed invalid Unicode surrogates from chunk 708
+2025-04-26 10:26:34,214 | WARNING | vectorstore_utils | Removed invalid Unicode surrogates from chunk 709
+2025-04-26 10:26:34,214 | WARNING | vectorstore_utils | Removed invalid Unicode surrogates from chunk 710
+2025-04-26 10:26:34,215 | WARNING | vectorstore_utils | Removed invalid Unicode surrogates from chunk 711
+2025-04-26 10:26:34,216 | WARNING | vectorstore_utils | Removed invalid Unicode surrogates from chunk 712
+2025-04-26 10:26:34,216 | WARNING | vectorstore_utils | Removed invalid Unicode surrogates from chunk 713
+2025-04-26 10:26:34,267 | WARNING | vectorstore_utils | Removed invalid Unicode surrogates from chunk 989
+2025-04-26 10:26:34,267 | WARNING | vectorstore_utils | Removed invalid Unicode surrogates from chunk 990
+2025-04-26 10:26:35,085 | INFO | vectorstore_utils | Leaving existing collection 'machine-learning-book' intact (append mode)
+2025-04-26 10:26:44,436 | INFO | vectorstore_utils | Uploaded 1072 embeddings to 'machine-learning-book'
+2025-04-26 10:26:44,454 | INFO | __main__ | Appended 1072 embeddings to Qdrant collection `machine-learning-book`.
+2025-04-26 10:26:47,130 | INFO | __main__ | Total vectors in `machine-learning-book`: 3914
+2025-04-26 10:26:47,138 | INFO | __main__ | Local file cleaned up: 668642be-01a5-4148-8928-9c3c3aa44b24.pdf
