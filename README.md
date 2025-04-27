@@ -52,7 +52,7 @@ The app is cloud-ready and uses:
 ## 🏗️ Project Structure
 
 ```
-RAG-SELF/
+ML-chatbot/
 │
 ├── Admin/              # Admin portal for managing documents
 │   ├── app.py
@@ -63,7 +63,6 @@ RAG-SELF/
 │   ├── core/           # Chat logic, error handling, logging
 │   └── services/       # LLM, memory, vector operations
 │
-├── tests/              # Unit tests for Admin and User components
 │
 ├── .env                # AWS keys, Qdrant URL, Bedrock configs
 ├── .gitignore          # Ignore venv, cache, env, etc.
@@ -78,8 +77,8 @@ RAG-SELF/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/RAG-SELF.git
-cd RAG-SELF
+git clone https://github.com/2003saurabh/ML-chatbot.git
+cd ML-chatbot
 ```
 
 ### 2. Create and Activate a Virtual Environment (optional but recommended)
@@ -102,8 +101,8 @@ AWS_SECRET_ACCESS_KEY=your_secret_key
 AWS_REGION=your_aws_region
 S3_BUCKET_NAME=your_bucket_name
 
-QDRANT_URL=http://localhost:6333
-QDRANT_API_KEY=your_qdrant_key (if applicable)
+QDRANT_URL=Qdrant_end_point
+QDRANT_API_KEY=your_qdrant_key 
 
 BEDROCK_EMBEDDING_MODEL_ID=amazon.titan-embed-text-v2
 BEDROCK_LLM_MODEL_ID=meta.llama3-8b-instruct
@@ -127,20 +126,6 @@ streamlit run main.py
 
 ---
 
-## 🧪 Running Tests
-
-Run all tests:
-```bash
-pytest tests/
-```
-
-Run tests for Admin or User separately:
-```bash
-pytest tests/test_admin/
-pytest tests/test_user/
-```
-
----
 
 ## 📚 Tech Stack
 
